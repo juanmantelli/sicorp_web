@@ -3840,6 +3840,10 @@ fieldset:disabled .btn {
 .dropdown-toggle {
     white-space: nowrap
 }
+.space-around {
+    justify-content: space-around !important;
+}
+
 
 .dropdown-toggle::after {
     display: inline-block;

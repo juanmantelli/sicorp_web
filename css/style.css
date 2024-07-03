@@ -24,6 +24,9 @@
     bottom: 45px;
     z-index: 99;
 }
+.space-around {
+    justify-content: space-around !important;
+}
 
 
 /*** Spinner ***/
