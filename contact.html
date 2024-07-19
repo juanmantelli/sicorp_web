@@ -207,28 +207,28 @@
     <script src="js/main.js"></script>
     <script>
         (function(){
-            emailjs.init("-hfop7TrLUmjDuwPV");
+            emailjs.init("xWy4cPF-lTb096U4z"); // Usar la clave pública aquí
         })();
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Get form values
+            // Obtener los valores del formulario
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var telefono = document.getElementById('telefono').value;
             var message = document.getElementById('message').value;
 
-            // Define the template parameters
+            // Definir los parámetros de la plantilla
             var templateParams = {
                 from_name: name,
                 from_email: email,
                 from_telefono: telefono,
-                message: message   // This should match the variable name in your EmailJS template
+                message: message
             };
 
-            // Send the email using EmailJS
-            emailjs.send('service_if2kqb6', 'template_62i28mn', templateParams)
+            // Enviar el correo usando EmailJS
+            emailjs.send('service_xq873me', 'template_t8de4vr', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
@@ -237,7 +237,7 @@
                         icon: 'success',
                         confirmButtonText: 'Aceptar'
                     });
-                    document.getElementById('contact-form').reset(); // Clear the form
+                    document.getElementById('contact-form').reset(); // Limpiar el formulario
                 }, function(error) {
                     console.log('FAILED...', error);
                     Swal.fire({
