@@ -250,7 +250,14 @@
 
 /*** Service ***/
 .service-item {
+    border-radius: 30px !important;
+    transition: all 0.3s ease;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .service-icon {
