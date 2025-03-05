@@ -198,20 +198,22 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- SweetAlert2 SDK -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- Dotenv -->
+    <script src="https://cdn.jsdelivr.net/npm/dotenv-expand@5.1.0/lib/main.min.js"></script>
     <script>
-        (function(){
-            // Nueva forma de inicializar EmailJS
-            emailjs.init({
-                publicKey: "zH541fCV5pA5y_FPr",
-            });
-        })();
+        // Cargar variables de entorno
+        const config = {
+            emailjs: {
+                serviceId: process.env.EMAILJS_SERVICE_ID,
+                templateId: process.env.EMAILJS_TEMPLATE_ID,
+                userId: process.env.EMAILJS_USER_ID
+            }
+        };
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -234,34 +236,52 @@
             var telefono = document.getElementById('telefono').value;
             var message = document.getElementById('message').value;
 
-            // Definir los parámetros de la plantilla
-            var templateParams = {
-                from_name: name,
-                from_email: email,
-                from_telefono: telefono,
-                message: message
+            // Datos para la API usando variables de entorno
+            const data = {
+                service_id: config.emailjs.serviceId,
+                template_id: config.emailjs.templateId,
+                user_id: config.emailjs.userId,
+                template_params: {
+                    from_name: name,
+                    from_email: email,
+                    from_telefono: telefono,
+                    message: message
+                }
             };
 
-            // Enviar el correo usando EmailJS
-            emailjs.send('service_9jzd3sa', 'template_sg3n0wb', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    Swal.fire({
-                        title: '¡Correo enviado exitosamente!',
-                        text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
-                        icon: 'success',
-                        confirmButtonText: 'Aceptar'
-                    });
-                    document.getElementById('contact-form').reset(); // Limpiar el formulario
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    Swal.fire({
-                        title: 'Error al enviar el correo',
-                        text: 'Por favor, intenta nuevamente más tarde.',
-                        icon: 'error',
-                        confirmButtonText: 'Aceptar'
-                    });
+            // Enviar usando fetch y la API directamente
+            fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(result => {
+                console.log('SUCCESS!', result);
+                Swal.fire({
+                    title: '¡Correo enviado exitosamente!',
+                    text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
                 });
+                document.getElementById('contact-form').reset();
+            })
+            .catch(error => {
+                console.log('FAILED...', error);
+                Swal.fire({
+                    title: 'Error al enviar el correo',
+                    text: 'Por favor, intenta nuevamente más tarde.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            });
         });
     </script>
 </body>
