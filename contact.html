@@ -199,7 +199,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- SweetAlert2 SDK -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
@@ -207,7 +207,10 @@
     <script src="js/main.js"></script>
     <script>
         (function(){
-            emailjs.init("zH541fCV5pA5y_FPr");
+            // Nueva forma de inicializar EmailJS
+            emailjs.init({
+                publicKey: "zH541fCV5pA5y_FPr",
+            });
         })();
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
