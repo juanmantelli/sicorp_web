@@ -203,18 +203,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- Dotenv -->
-    <script src="https://cdn.jsdelivr.net/npm/dotenv-expand@5.1.0/lib/main.min.js"></script>
+    <!-- Configuración -->
+    <script src="js/config.js"></script>
     <script>
-        // Cargar variables de entorno
-        const config = {
-            emailjs: {
-                serviceId: process.env.EMAILJS_SERVICE_ID,
-                templateId: process.env.EMAILJS_TEMPLATE_ID,
-                userId: process.env.EMAILJS_USER_ID
-            }
-        };
-
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -236,7 +227,7 @@
             var telefono = document.getElementById('telefono').value;
             var message = document.getElementById('message').value;
 
-            // Datos para la API usando variables de entorno
+            // Datos para la API usando config.js
             const data = {
                 service_id: config.emailjs.serviceId,
                 template_id: config.emailjs.templateId,
