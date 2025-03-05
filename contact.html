@@ -207,11 +207,23 @@
     <script src="js/main.js"></script>
     <script>
         (function(){
-            emailjs.init("xWy4cPF-lTb096U4z"); // Usar la clave pública aquí
+            emailjs.init("xWy4cPF-lTb096U4z");
         })();
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
+
+            // Mostrar loading
+            Swal.fire({
+                title: 'Enviando mensaje...',
+                text: 'Por favor espere',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                showConfirmButton: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
 
             // Obtener los valores del formulario
             var name = document.getElementById('name').value;
@@ -228,7 +240,7 @@
             };
 
             // Enviar el correo usando EmailJS
-            emailjs.send('service_xq873me', 'template_t8de4vr', templateParams)
+            emailjs.send('service_9jzd3sa', 'template_sg3n0wb', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     Swal.fire({
