@@ -82,6 +82,43 @@
     });
 
 
+    // Clients carousel
+    $(".client-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav: true,
+        navText: [
+            '<i class="fa fa-chevron-left"></i>',
+            '<i class="fa fa-chevron-right"></i>'
+        ],
+        responsive: {
+            0:{
+                items:2,
+                nav: false
+            },
+            576:{
+                items:3,
+                nav: false
+            },
+            768:{
+                items:4,
+                nav: true
+            },
+            992:{
+                items:5,
+                nav: true
+            },
+            1200:{
+                items:6,
+                nav: true
+            }
+        }
+    });
+
+
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
