@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SICORP Infographic Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#0369a1',   // sky-700
+            'primary-medium': '#0ea5e9', // sky-500
+            'primary-light': '#7dd3fc',  // sky-300
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .radial-progress {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .radial-progress svg {
+      display: block;
+    }
+    .radial-progress .percentage-text {
+      position: absolute;
+      font-size: 1.25rem;
+      font-weight: bold;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-sky-50 min-h-screen font-sans">
+    <div class="container mx-auto p-4 sm:p-8 max-w-5xl">
+      <header class="bg-primary-dark text-white p-8 rounded-t-lg shadow-lg text-center">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-wider">SICORP</h1>
+        <p class="text-xl md:text-2xl mt-2 font-light">Gestión de Proveedores</p>
+      </header>
+
+      <section class="bg-white p-6 shadow-lg">
+        <h2 class="text-center text-xl text-primary-dark font-semibold">
+          Resultados de la plataforma de gestión.
+        </h2>
+        <div class="w-24 h-1 bg-primary-medium mx-auto mt-2 mb-6"></div>
+      </section>
+
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 bg-sky-50">
+        <!-- Card 1: Payment Speed & Process Optimization -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-primary-medium text-white p-6 rounded-lg text-center">
+                <span class="text-5xl font-bold">85%</span>
+              </div>
+              <p class="text-gray-600">
+                De las facturas recibidas se pagan en menos de 15 días, optimizando el flujo de caja para los proveedores del municipio.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center my-6 py-4 border-t border-b border-gray-200">
+              <div class="flex flex-col items-center p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.992-2.992L12 17.25l1.197-.398a3.375 3.375 0 002.992-2.992L16.5 12.75l.398 1.197a3.375 3.375 0 002.992 2.992L21 17.25l-1.197.398a3.375 3.375 0 00-2.992 2.992z" />
+                </svg>
+                <h4 class="font-semibold text-primary-dark">Validación con IA</h4>
+                <p class="text-xs text-gray-500 mt-1">Nuestra IA interpreta y valida facturas y remitos con un 99.5% de precisión.</p>
+              </div>
+              <div class="flex flex-col items-center p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h4 class="font-semibold text-primary-dark">Proceso Acelerado</h4>
+                <p class="text-xs text-gray-500 mt-1">El ciclo completo, desde la Orden de Compra hasta el pago, se reduce a días.</p>
+              </div>
+              <div class="flex flex-col items-center p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21.75 9.75V19.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5V4.5A2.25 2.25 0 014.5 2.25h9.75" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 2.25v4.5a1.5 1.5 0 001.5 1.5h4.5" />
+                </svg>
+                <h4 class="font-semibold text-primary-dark">Cero Papel y Firma Digital</h4>
+                <p class="text-xs text-gray-500 mt-1">Trazabilidad total y seguridad con Cero Papel y Firma Digital en cada paso.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary-dark text-white p-4 rounded-lg text-center mt-4">
+            <h3 class="text-xl font-bold">CICLO DE PAGO OPTIMIZADO</h3>
+            <p class="text-sm mt-2 font-light">
+              Lo que antes tomaba meses de seguimiento manual, ahora es un flujo digital ágil y transparente.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Adoption and Efficiency Chart -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+            <h3 class="font-bold px-2">ADOPCIÓN Y EFICIENCIA</h3>
+          </div>
+          <p class="text-gray-600 mb-4 text-sm">
+            La plataforma digital centraliza la comunicación y agiliza los procesos, resultando en una rápida adopción por parte de los proveedores y una mejora drástica en la eficiencia municipal.
+          </p>
+          <div style="width: 100%; height: 250px;">
+            <canvas id="areaChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Card 3: Incident Reduction -->
+        <div class="md:col-span-2 bg-primary-dark text-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div style="width: 100%; height: 300px;">
+              <canvas id="incidentChart"></canvas>
+            </div>
+          </div>
+          <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+              <h3 class="font-bold px-2">REDUCCIÓN DE INCIDENCIAS</h3>
+            </div>
+            <h4 class="text-3xl font-semibold mt-2">Menos Errores, Más Eficiencia</h4>
+            <p class="text-gray-300 mt-2 mb-4">
+              La validación por IA y los flujos digitales han disminuido drásticamente los errores comunes, eliminando idas y vueltas y acelerando la aprobación.
+            </p>
+            <div class="w-full text-center md:text-left">
+              <span class="text-7xl font-bold text-primary-light">94%</span>
+              <p class="text-xl font-semibold text-white">De Reducción General de Errores</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Payment Cycle Reduction -->
+        <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div style="width: 100%; height: 200px;">
+              <canvas id="horizontalBarChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+              <h3 class="font-bold px-2">REDUCCIÓN DEL CICLO DE PAGO</h3>
+            </div>
+            <p class="text-gray-600 mt-2">
+              La digitalización total del proceso, desde la orden de compra hasta la confirmación del pago, ha reducido el tiempo promedio en un 80% en los últimos años.
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <footer class="bg-primary-dark text-white p-8 rounded-b-lg shadow-lg">
+        <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+          <h3 class="font-bold px-2">DATOS PARA UNA GESTIÓN EFICIENTE</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <p class="text-gray-300">
+            SICORP Proveedores es más que un portal de facturación. Es una herramienta estratégica que proporciona visibilidad completa del gasto, optimiza el flujo de caja y fortalece la relación con los proveedores clave del municipio.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div class="flex flex-col items-center">
+              <div id="radial-98" class="radial-progress"></div>
+              <h4 class="mt-2 text-sm font-semibold">Satisfacción del Proveedor</h4>
+            </div>
+            <div class="flex flex-col items-center">
+              <div id="radial-95" class="radial-progress"></div>
+              <h4 class="mt-2 text-sm font-semibold">Adhesión de Proveedores</h4>
+            </div>
+            <div class="flex flex-col items-center">
+              <div id="radial-75" class="radial-progress"></div>
+              <h4 class="mt-2 text-sm font-semibold">Horas Adm. Ahorradas</h4>
+            </div>
+            <div class="flex flex-col items-center">
+              <div id="radial-100" class="radial-progress"></div>
+              <h4 class="mt-2 text-sm font-semibold">Transparencia de Gasto</h4>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Radial Progress Component
+    function createRadialProgress(containerId, percentage, color) {
+      const container = document.getElementById(containerId);
+      const radius = 50;
+      const stroke = 10;
+      const normalizedRadius = radius - stroke * 2;
+      const circumference = normalizedRadius * 2 * Math.PI;
+      const strokeDashoffset = circumference - (percentage / 100) * circumference;
+      
+      const textColor = color === '#7dd3fc' ? 'text-primary-light' : 'text-white';
+      container.innerHTML = `
+        <svg height="${radius * 2}" width="${radius * 2}" style="transform: rotate(-90deg);">
+          <circle
+            stroke="rgba(255, 255, 255, 0.2)"
+            fill="transparent"
+            stroke-width="${stroke}"
+            r="${normalizedRadius}"
+            cx="${radius}"
+            cy="${radius}"
+          />
+          <circle
+            class="progress"
+            stroke="${color}"
+            fill="transparent"
+            stroke-width="${stroke}"
+            stroke-dasharray="${circumference} ${circumference}"
+            style="stroke-dashoffset: ${strokeDashoffset}; transition: stroke-dashoffset 1s ease-out;"
+            r="${normalizedRadius}"
+            cx="${radius}"
+            cy="${radius}"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="percentage-text ${textColor}">${percentage}%</span>
+      `;
+    }
+
+    // Area Chart
+    const areaCtx = document.getElementById('areaChart').getContext('2d');
+    new Chart(areaCtx, {
+      type: 'line',
+      data: {
+        labels: ['Trimestre 1', 'Trimestre 2', 'Trimestre 3'],
+        datasets: [
+          {
+            label: 'Proceso Manual',
+            data: [60, 65, 70],
+            borderColor: '#7dd3fc',
+            backgroundColor: 'rgba(125, 211, 252, 0.8)',
+            fill: true,
+            tension: 0.4
+          },
+          {
+            label: 'Sistema Sicorp',
+            data: [200, 500, 950],
+            borderColor: '#0369a1',
+            backgroundColor: 'rgba(3, 105, 161, 0.8)',
+            fill: true,
+            tension: 0.4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            backgroundColor: '#ffffff',
+            borderColor: '#e5e7eb',
+            borderWidth: 1,
+            borderRadius: 8
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#6b7280'
+            },
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#6b7280'
+            },
+            grid: {
+              color: 'rgba(0, 0, 0, 0.05)',
+              drawBorder: false
+            }
+          }
+        }
+      }
+    });
+
+    // Incident Reduction Chart
+    const incidentCtx = document.getElementById('incidentChart').getContext('2d');
+    new Chart(incidentCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Datos Incorrectos', 'Falta Documentación', 'Errores de Cálculo'],
+        datasets: [
+          {
+            label: 'Antes de SICORP',
+            data: [25, 18, 12],
+            backgroundColor: '#7dd3fc'
+          },
+          {
+            label: 'Con SICORP',
+            data: [2, 1, 0.5],
+            backgroundColor: '#ffffff'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              color: '#ffffff'
+            }
+          },
+          tooltip: {
+            backgroundColor: '#0369a1',
+            borderColor: '#7dd3fc',
+            borderWidth: 1,
+            borderRadius: 8,
+            titleColor: '#ffffff',
+            bodyColor: '#ffffff'
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#e5e7eb'
+            },
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            ticks: {
+              color: '#e5e7eb'
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.2)',
+              drawBorder: false
+            },
+            title: {
+              display: true,
+              text: 'Tasa de Error (%)',
+              color: '#e5e7eb'
+            }
+          }
+        }
+      }
+    });
+
+    // Horizontal Bar Chart
+    const horizontalBarCtx = document.getElementById('horizontalBarChart').getContext('2d');
+    new Chart(horizontalBarCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Antes', 'Ahora'],
+        datasets: [{
+          label: 'Tiempo promedio de pago (días)',
+          data: [45, 9],
+          backgroundColor: '#0ea5e9'
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: '#ffffff',
+            borderColor: '#e5e7eb',
+            borderWidth: 1,
+            borderRadius: 8,
+            callbacks: {
+              label: function(context) {
+                return context.parsed.x + ' días';
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            max: 50,
+            ticks: {
+              color: '#6b7280'
+            },
+            grid: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: 'Tiempo promedio de pago (días)',
+              color: '#6b7280'
+            }
+          },
+          y: {
+            ticks: {
+              color: '#6b7280'
+            },
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+
+    // Initialize Radial Progress components
+    createRadialProgress('radial-98', 98, '#7dd3fc');
+    createRadialProgress('radial-95', 95, '#ffffff');
+    createRadialProgress('radial-75', 75, '#7dd3fc');
+    createRadialProgress('radial-100', 100, '#ffffff');
+  </script>
+</body>
+</html>

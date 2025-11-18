@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SICORP - Sistema de Gestión de Stock</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#0f766e',   // teal-700
+            'primary-medium': '#14b8a6', // teal-500
+            'primary-light': '#5eead4',  // teal-300
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes progressAnimation {
+      from {
+        stroke-dashoffset: var(--circumference);
+      }
+      to {
+        stroke-dashoffset: var(--final-offset);
+      }
+    }
+    
+    .radial-progress {
+      animation: progressAnimation 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-teal-50 min-h-screen font-sans">
+  <div class="container mx-auto p-4 sm:p-8 max-w-5xl">
+    <header class="bg-primary-dark text-white p-8 rounded-t-lg shadow-lg text-center">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-wider">SiCORP</h1>
+      <p class="text-xl md:text-2xl mt-2 font-light">Sistema de Gestión de Stock</p>
+    </header>
+
+    <section class="bg-white p-6 shadow-lg">
+      <h2 class="text-center text-xl text-primary-dark font-semibold">
+        Resultados de la plataforma de gestión de inventario.
+      </h2>
+      <div class="w-24 h-1 bg-primary-medium mx-auto mt-2 mb-6"></div>
+    </section>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 bg-teal-50">
+      <!-- Card 1: Inventory Accuracy & Key Features -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-4">
+            <div class="bg-primary-medium text-white p-6 rounded-lg text-center">
+              <span class="text-4xl font-bold">99.8%</span>
+            </div>
+            <p class="text-gray-600">
+              De precisión en el inventario, asegurando la disponibilidad de insumos críticos para los servicios.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center my-6 py-4 border-t border-b border-gray-200">
+            <div class="flex flex-col items-center p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.5A.75.75 0 014.5 3.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75h-4.5a.75.75 0 01-.75-.75v-4.5zM3.75 15A.75.75 0 014.5 14.25h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75h-4.5a.75.75 0 01-.75-.75v-4.5zM15 3.75A.75.75 0 0014.25 4.5v4.5a.75.75 0 00.75.75h4.5a.75.75 0 00.75-.75v-4.5a.75.75 0 00-.75-.75h-4.5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 15h.008v.008H15V15zm.75 2.25h.008v.008H15.75V17.25zm.75-1.5h.008v.008H16.5V15.75zM15 17.25h.008v.008H15V17.25zm.75-1.5h.008v.008H15.75V15.75zm.75 2.25h.008v.008H16.5V17.25zM15.75 19.5h.008v.008H15.75V19.5zm.75-1.5h.008v.008H16.5V18zM18 15h.008v.008H18V15zm.75 2.25h.008v.008H18.75V17.25zm.75-1.5h.008v.008H19.5V15.75zM18 17.25h.008v.008H18V17.25zm.75-1.5h.008v.008H18.75V15.75zm.75 2.25h.008v.008H19.5V17.25zM18.75 19.5h.008v.008H18.75V19.5zm.75-1.5h.008v.008H19.5V18z" />
+              </svg>
+              <h4 class="font-semibold text-primary-dark text-sm">Trazabilidad por Ítem</h4>
+              <p class="text-xs text-gray-500 mt-1">Rastreo de cada artículo desde su ingreso hasta su uso final.</p>
+            </div>
+            <div class="flex flex-col items-center p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5A.75.75 0 0114.25 12h.01a.75.75 0 01.75.75v7.5m0 0H15M12 21h-1.5m1.5 0v-7.5A.75.75 0 0011.25 12h-.01a.75.75 0 00-.75.75v7.5m0 0H9m9 0h-3.375a.75.75 0 01-.75-.75V13.5m0 0V12m0 1.5v-1.5m0 0h3.375c.414 0 .75.336.75.75v7.5m0 0H18M3 12h18M3 12a9 9 0 0018 0M3 12a9 9 0 0118 0m0 0V7.5a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 7.5v4.5m18 0v-4.5a2.25 2.25 0 00-2.25-2.25H5.25a2.25 2.25 0 00-2.25 2.25v4.5" />
+              </svg>
+              <h4 class="font-semibold text-primary-dark text-sm">Gestión Multidepósito</h4>
+              <p class="text-xs text-gray-500 mt-1">Control centralizado de múltiples almacenes y depósitos.</p>
+            </div>
+            <div class="flex flex-col items-center p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>
+              <h4 class="font-semibold text-primary-dark text-sm">Alertas de Stock Mínimo</h4>
+              <p class="text-xs text-gray-500 mt-1">Notificaciones automáticas para reponer insumos a tiempo.</p>
+            </div>
+            <div class="flex flex-col items-center p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25z" />
+              </svg>
+              <h4 class="font-semibold text-primary-dark text-sm">Valorización de Stock</h4>
+              <p class="text-xs text-gray-500 mt-1">Valora tu inventario en ARS y USD con cotización en línea.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-primary-dark text-white p-4 rounded-lg text-center mt-4">
+          <h3 class="text-xl font-bold">CONTROL TOTAL DEL INVENTARIO</h3>
+          <p class="text-sm mt-2 font-light">
+            Lo que antes requería conteos manuales y generaba errores, ahora es un sistema preciso en tiempo real.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Waste Reduction Chart -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+          <h3 class="font-bold px-2">REDUCCIÓN DE MERMAS</h3>
+        </div>
+        <p class="text-gray-600 mb-4 text-sm">
+          La gestión proactiva y el análisis de datos han permitido una disminución drástica del inventario obsoleto o vencido, optimizando el uso de los recursos públicos.
+        </p>
+        <div style="width: 100%; height: 250px; position: relative;">
+          <canvas id="areaChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Card 3: Stockout Reduction -->
+      <div class="md:col-span-2 bg-primary-dark text-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+          <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+            <h3 class="font-bold px-2">DISPONIBILIDAD GARANTIZADA</h3>
+          </div>
+          <h4 class="text-3xl font-semibold mt-2">Cero Quiebres de Stock Crítico</h4>
+          <p class="text-gray-300 mt-2 mb-4">
+            Al anticipar la demanda y automatizar los pedidos de reposición, hemos eliminado las interrupciones en servicios esenciales por falta de insumos.
+          </p>
+          <div class="w-full text-center md:text-left">
+            <span class="text-7xl font-bold text-primary-light">97%</span>
+            <p class="text-xl font-semibold text-white">De Reducción de Quiebres de Stock</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div style="width: 100%; height: 300px; position: relative;">
+            <canvas id="incidentChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Internal Delivery Time Reduction -->
+      <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div style="width: 100%; height: 200px; position: relative;">
+            <canvas id="horizontalBarChart"></canvas>
+          </div>
+        </div>
+        <div>
+          <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+            <h3 class="font-bold px-2">AGILIDAD EN LA ENTREGA INTERNA</h3>
+          </div>
+          <p class="text-gray-600 mt-2">
+            Gracias a la optimización para emitir órdenes de salida, el tiempo desde la solicitud hasta la recepción de insumos se ha reducido en un 89%, mejorando la operatividad.
+          </p>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-primary-dark text-white p-8 rounded-b-lg shadow-lg">
+      <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+        <h3 class="font-bold px-2">DATOS PARA UNA GESTIÓN EFICIENTE</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <p class="text-gray-300">
+          SICORP Stock es la plataforma central que transforma el manejo de inventarios en una ventaja estratégica, garantizando la operatividad continua de todos los servicios.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="flex flex-col items-center">
+            <div id="radial-80" class="relative"></div>
+            <h4 class="mt-2 text-sm font-semibold">Optimización de Rotación</h4>
+          </div>
+          <div class="flex flex-col items-center">
+            <div id="radial-99" class="relative"></div>
+            <h4 class="mt-2 text-sm font-semibold">Cumplimiento de Pedidos</h4>
+          </div>
+          <div class="flex flex-col items-center">
+            <div id="radial-70" class="relative"></div>
+            <h4 class="mt-2 text-sm font-semibold">Reducción Sobre-stock</h4>
+          </div>
+          <div class="flex flex-col items-center">
+            <div id="radial-90" class="relative"></div>
+            <h4 class="mt-2 text-sm font-semibold">Uso de Almacén</h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Función para crear gráfico de área (Reducción de mermas)
+    function createAreaChart() {
+      const ctx = document.getElementById('areaChart');
+      if (!ctx) return;
+      
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Año 1', 'Año 2', 'Año 3'],
+          datasets: [
+            {
+              label: 'Proceso Manual',
+              data: [15, 16, 15],
+              borderColor: '#5eead4',
+              backgroundColor: 'rgba(94, 234, 212, 0.8)',
+              fill: true,
+              tension: 0.4
+            },
+            {
+              label: 'Sistema de stock',
+              data: [8, 4, 1.5],
+              borderColor: '#0f766e',
+              backgroundColor: 'rgba(15, 118, 110, 0.8)',
+              fill: true,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top'
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + context.parsed.y + '%';
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback: function(value) {
+                  return value + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Función para crear gráfico de barras horizontales (Reducción de incidentes)
+    function createIncidentChart() {
+      const ctx = document.getElementById('incidentChart');
+      if (!ctx) return;
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Insumos Críticos', 'Material de Oficina', 'Equipamiento Menor'],
+          datasets: [
+            {
+              label: 'Antes de SICORP',
+              data: [22, 35, 15],
+              backgroundColor: '#5eead4'
+            },
+            {
+              label: 'Con SICORP',
+              data: [0, 2, 1.5],
+              backgroundColor: '#ffffff'
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                color: '#ffffff'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + context.parsed.x + '%';
+                }
+              },
+              backgroundColor: '#0f766e',
+              borderColor: '#5eead4',
+              borderWidth: 1,
+              titleColor: '#ffffff',
+              bodyColor: '#ffffff'
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: '#e5e7eb'
+              },
+              grid: {
+                color: 'rgba(255, 255, 255, 0.2)'
+              }
+            },
+            y: {
+              ticks: {
+                color: '#e5e7eb'
+              },
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Función para crear gráfico de barras horizontales (Tiempo de entrega)
+    function createHorizontalBarChart() {
+      const ctx = document.getElementById('horizontalBarChart');
+      if (!ctx) return;
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Antes', 'Ahora'],
+          datasets: [
+            {
+              label: 'Tiempo de Entrega Interna (hs)',
+              data: [72, 8],
+              backgroundColor: '#14b8a6'
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.parsed.x + ' horas';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              max: 80,
+              ticks: {
+                color: '#6b7280'
+              },
+              grid: {
+                display: false
+              }
+            },
+            y: {
+              ticks: {
+                color: '#6b7280'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Función para crear radial progress
+    function createRadialProgress(containerId, percentage, colorClass) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      
+      const radius = 50;
+      const stroke = 10;
+      const normalizedRadius = radius - stroke * 2;
+      const circumference = normalizedRadius * 2 * Math.PI;
+      const strokeDashoffset = circumference - (percentage / 100) * circumference;
+      
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('height', radius * 2);
+      svg.setAttribute('width', radius * 2);
+      svg.setAttribute('class', '-rotate-90');
+      svg.style.transform = 'rotate(-90deg)';
+      
+      // Círculo de fondo
+      const bgCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      bgCircle.setAttribute('stroke', 'rgba(255, 255, 255, 0.2)');
+      bgCircle.setAttribute('fill', 'transparent');
+      bgCircle.setAttribute('stroke-width', stroke);
+      bgCircle.setAttribute('r', normalizedRadius);
+      bgCircle.setAttribute('cx', radius);
+      bgCircle.setAttribute('cy', radius);
+      svg.appendChild(bgCircle);
+      
+      // Círculo de progreso
+      const progressCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      progressCircle.setAttribute('class', colorClass);
+      progressCircle.setAttribute('stroke', 'currentColor');
+      progressCircle.setAttribute('fill', 'transparent');
+      progressCircle.setAttribute('stroke-width', stroke);
+      progressCircle.setAttribute('stroke-dasharray', circumference + ' ' + circumference);
+      progressCircle.setAttribute('stroke-dashoffset', circumference);
+      progressCircle.setAttribute('r', normalizedRadius);
+      progressCircle.setAttribute('cx', radius);
+      progressCircle.setAttribute('cy', radius);
+      progressCircle.setAttribute('stroke-linecap', 'round');
+      progressCircle.style.transition = 'stroke-dashoffset 1s ease-out';
+      svg.appendChild(progressCircle);
+      
+      // Texto (usando un div superpuesto en lugar de texto SVG rotado)
+      const textDiv = document.createElement('div');
+      textDiv.setAttribute('class', 'absolute text-xl font-bold ' + colorClass);
+      textDiv.style.top = '50%';
+      textDiv.style.left = '50%';
+      textDiv.style.transform = 'translate(-50%, -50%)';
+      textDiv.textContent = percentage + '%';
+      container.style.position = 'relative';
+      container.appendChild(textDiv);
+      
+      container.appendChild(svg);
+      
+      // Animar el progreso
+      setTimeout(() => {
+        progressCircle.style.strokeDashoffset = strokeDashoffset;
+      }, 100);
+    }
+
+    // Inicializar todo cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', function() {
+      createAreaChart();
+      createIncidentChart();
+      createHorizontalBarChart();
+      createRadialProgress('radial-80', 80, 'text-primary-light');
+      createRadialProgress('radial-99', 99, 'text-white');
+      createRadialProgress('radial-70', 70, 'text-primary-light');
+      createRadialProgress('radial-90', 90, 'text-white');
+    });
+  </script>
+</body>
+</html>
+

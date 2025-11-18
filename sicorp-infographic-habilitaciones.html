@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SICORP Infographic Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sicorp-blue-dark': '#0d244f',
+                        'sicorp-blue-medium': '#2563eb',
+                        'sicorp-blue-light': '#60a5fa',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes progressAnimation {
+            from {
+                stroke-dashoffset: 314.16;
+            }
+        }
+        .progress-circle {
+            animation: progressAnimation 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gray-100 min-h-screen font-sans">
+        <div class="container mx-auto p-4 sm:p-8 max-w-5xl">
+            <header class="bg-sicorp-blue-dark text-white p-8 rounded-t-lg shadow-lg text-center">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-wider">SICORP</h1>
+                <p class="text-xl md:text-2xl mt-2 font-light">Habilitaciones Comerciales</p>
+            </header>
+
+            <section class="bg-white p-6 shadow-lg">
+                <h2 class="text-center text-xl text-sicorp-blue-dark font-semibold">
+                    Números y datos del sistema en 2025.
+                </h2>
+                <div class="w-24 h-1 bg-sicorp-blue-medium mx-auto mt-2 mb-6"></div>
+            </section>
+
+            <main class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 bg-gray-100">
+                <!-- Card 1: 70% Completion & Reduced Management Times -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-sicorp-blue-medium text-white p-6 rounded-lg text-center">
+                                <span class="text-5xl font-bold">70%</span>
+                            </div>
+                            <p class="text-gray-600">
+                                De las habilitaciones solicitadas por los contribuyentes se completan en menos de 48 horas, gracias a la automatización y verificación inteligente de nuestra IA.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center my-6 py-4 border-t border-b border-gray-200">
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-sicorp-blue-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.992-2.992L12 17.25l1.197-.398a3.375 3.375 0 002.992-2.992L16.5 12.75l.398 1.197a3.375 3.375 0 002.992 2.992L21 17.25l-1.197.398a3.375 3.375 0 00-2.992 2.992z" />
+                                </svg>
+                                <h4 class="font-semibold text-sicorp-blue-dark">Automatización Inteligente</h4>
+                                <p class="text-xs text-gray-500 mt-1">Nuestra IA verifica la documentación del contribuyente con un 99% de precisión.</p>
+                            </div>
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-sicorp-blue-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <h4 class="font-semibold text-sicorp-blue-dark">Agilidad Sin Precedentes</h4>
+                                <p class="text-xs text-gray-500 mt-1">Reducción de tiempos de espera para el municipio y los ciudadanos.</p>
+                            </div>
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-sicorp-blue-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21.75 9.75V19.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5V4.5A2.25 2.25 0 014.5 2.25h9.75" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 2.25v4.5a1.5 1.5 0 001.5 1.5h4.5" />
+                                </svg>
+                                <h4 class="font-semibold text-sicorp-blue-dark">Menos Papelerío</h4>
+                                <p class="text-xs text-gray-500 mt-1">Digitalización completa del proceso, eliminando el papeleo físico y los archivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-sicorp-blue-dark text-white p-4 rounded-lg text-center mt-4">
+                        <h3 class="text-xl font-bold">TIEMPOS DE GESTIÓN REDUCIDOS</h3>
+                        <p class="text-sm mt-2 font-light">
+                            Los procesos municipales que antes tomaban días ahora se completan en cuestión de horas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Exponential Growth Chart -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="bg-sicorp-blue-medium text-white p-2 inline-block rounded mb-2">
+                        <h3 class="font-bold px-2">CRECIMIENTO EXPONENCIAL</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Fomentando el desarrollo local: la facilidad y rapidez del trámite incentiva la apertura de nuevos comercios, aumentando la cantidad de habilitaciones exponencialmente.
+                    </p>
+                    <div style="width: 100%; height: 250px;">
+                        <canvas id="areaChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Card 3: Success Probability -->
+                <div class="md:col-span-2 bg-sicorp-blue-dark text-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div style="width: 100%; height: 300px;">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="bg-white text-sicorp-blue-dark p-2 inline-block rounded mb-4">
+                            <h3 class="font-bold px-2">PROBABILIDAD DE ÉXITO</h3>
+                        </div>
+                        <p class="text-8xl font-bold my-4">95%</p>
+                        <div class="w-full bg-sicorp-blue-medium rounded-full h-4">
+                            <div class="bg-white h-4 rounded-full" style="width: 95%;"></div>
+                        </div>
+                        <p class="mt-4 text-gray-300">
+                            El 95% de las solicitudes iniciadas por los contribuyentes se completan exitosamente, minimizando abandonos y trámites frustrados.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Rapid Resolution -->
+                <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div style="width: 100%; height: 200px;">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-sicorp-blue-medium text-white p-2 inline-block rounded mb-2">
+                            <h3 class="font-bold px-2">RÁPIDA RESOLUCIÓN</h3>
+                        </div>
+                        <p class="text-gray-600 mt-2">
+                            Gracias a la automatización y validación en línea, los tiempos de habilitación se redujeron un 75 % en los últimos años.
+                        </p>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="bg-sicorp-blue-dark text-white p-8 rounded-b-lg shadow-lg">
+                <div class="bg-white text-sicorp-blue-dark p-2 inline-block rounded mb-4">
+                    <h3 class="font-bold px-2">DATOS PARA UNA GESTIÓN EFICIENTE</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <p class="text-gray-300">
+                        SICORP transforma la gestión municipal. Nuestra plataforma no solo agiliza trámites, sino que ofrece datos valiosos para la planificación urbana y el fomento del desarrollo económico local.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="relative flex items-center justify-center" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="-rotate-90">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress-97" cx="50" cy="50" r="40" stroke="#60a5fa" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="progress-circle"/>
+                                </svg>
+                                <span class="absolute text-xl font-bold text-sicorp-blue-light">97%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Satisfacción Ciudadana</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative flex items-center justify-center" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="-rotate-90">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress-85" cx="50" cy="50" r="40" stroke="white" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="progress-circle"/>
+                                </svg>
+                                <span class="absolute text-xl font-bold text-white">85%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Crecimiento Comercial</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative flex items-center justify-center" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="-rotate-90">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress-78" cx="50" cy="50" r="40" stroke="#60a5fa" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="progress-circle"/>
+                                </svg>
+                                <span class="absolute text-xl font-bold text-sicorp-blue-light">78%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Diversificación de Rubros</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative flex items-center justify-center" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="-rotate-90">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress-64" cx="50" cy="50" r="40" stroke="white" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="progress-circle"/>
+                                </svg>
+                                <span class="absolute text-xl font-bold text-white">64%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Optimización de Recursos</h4>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Area Chart - Crecimiento Exponencial
+        const areaCtx = document.getElementById('areaChart').getContext('2d');
+        new Chart(areaCtx, {
+            type: 'line',
+            data: {
+                labels: ['Año 1', 'Año 2', 'Año 3'],
+                datasets: [
+                    {
+                        label: 'Sistema Tradicional',
+                        data: [10, 20, 30],
+                        borderColor: '#60a5fa',
+                        backgroundColor: 'rgba(96, 165, 250, 0.8)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Sistema Sicorp',
+                        data: [10, 40, 90],
+                        borderColor: '#0d244f',
+                        backgroundColor: 'rgba(13, 36, 79, 0.8)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    },
+                    tooltip: {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        borderRadius: 8
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Pie Chart - Probabilidad de Éxito
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Habilitaciones', 'Anexos', 'Transferencias'],
+                datasets: [{
+                    data: [60, 25, 15],
+                    backgroundColor: ['#2563eb', '#60a5fa', '#e5e7eb'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            color: '#ffffff',
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Horizontal Bar Chart - Rápida Resolución
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2025'],
+                datasets: [{
+                    label: 'Tiempo promedio de habilitación (horas)',
+                    data: [240, 60],
+                    backgroundColor: '#2563eb',
+                    barThickness: 30
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        borderRadius: 8,
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.x + ' horas';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        max: 250,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Tiempo promedio de habilitación (horas)',
+                            color: '#6b7280'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Radial Progress Circles Animation
+        function animateProgress(id, percentage) {
+            const circle = document.getElementById(id);
+            const circumference = 2 * Math.PI * 40; // radius = 40
+            const offset = circumference - (percentage / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+
+        // Animate on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                animateProgress('progress-97', 97);
+                animateProgress('progress-85', 85);
+                animateProgress('progress-78', 78);
+                animateProgress('progress-64', 64);
+            }, 100);
+        });
+    </script>
+</body>
+</html>

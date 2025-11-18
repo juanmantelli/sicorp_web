@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiCORP Chatbot Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#4338ca',   // indigo-700
+                        'primary-medium': '#6366f1', // indigo-500
+                        'primary-light': '#a5b4fc',  // indigo-300
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes progressAnimation {
+            from {
+                stroke-dashoffset: 314;
+            }
+        }
+        .radial-progress {
+            animation: progressAnimation 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-indigo-50 min-h-screen font-sans">
+        <div class="container mx-auto p-4 sm:p-8 max-w-5xl">
+            <header class="bg-primary-dark text-white p-8 rounded-t-lg shadow-lg text-center">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-wider">SiCORP</h1>
+                <p class="text-xl md:text-2xl mt-2 font-light">Chatbot de Asistencia</p>
+            </header>
+
+            <section class="bg-white p-6 shadow-lg">
+                <h2 class="text-center text-xl text-primary-dark font-semibold">
+                    Inteligencia Artificial para la Atención al Usuario.
+                </h2>
+                <div class="w-24 h-1 bg-primary-medium mx-auto mt-2 mb-6"></div>
+            </section>
+
+            <main class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 bg-indigo-50">
+                <!-- Card 1: Automation Rate & Key Features -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary-medium text-white p-6 rounded-lg text-center">
+                                <span class="text-4xl font-bold">92%</span>
+                            </div>
+                            <p class="text-gray-600">
+                                De las consultas son resueltas automáticamente por la IA, liberando al personal para casos de mayor complejidad.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center my-6 py-4 border-t border-b border-gray-200">
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <h4 class="font-semibold text-primary-dark">Disponibilidad 24/7</h4>
+                                <p class="text-xs text-gray-500 mt-1">Las personas pueden realizar trámites y consultas en cualquier momento, desde cualquier lugar.</p>
+                            </div>
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h7.5M8.25 12h7.5m-7.5 5.25h7.5M3 13.5c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5S14.642 6 10.5 6 3 9.358 3 13.5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 18.75a.75.75 0 000-1.5.75.75 0 000 1.5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 14.25a.75.75 0 00-1.5 0 .75.75 0 001.5 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 11.25a.75.75 0 00-1.5 0 .75.75 0 001.5 0z" />
+                                </svg>
+                                <h4 class="font-semibold text-primary-dark">Inteligencia Artificial</h4>
+                                <p class="text-xs text-gray-500 mt-1">Comprende el lenguaje natural para ofrecer respuestas precisas y contextualizadas.</p>
+                            </div>
+                            <div class="flex flex-col items-center p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-10 w-10 text-primary-dark mb-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-3.03 8.25-6.75 8.25a8.25 8.25 0 01-5.132-1.748L3 21l1.748-5.132A8.25 8.25 0 013 12c0-4.556 3.03-8.25 6.75-8.25S21 7.444 21 12z" />
+                                </svg>
+                                <h4 class="font-semibold text-primary-dark">Canal Directo</h4>
+                                <p class="text-xs text-gray-500 mt-1">Integrado en WhatsApp para un acceso fácil y sin necesidad de instalar nuevas apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary-dark text-white p-4 rounded-lg text-center mt-4">
+                        <h3 class="text-xl font-bold">ATENCIÓN EFICIENTE DE SERVICIOS</h3>
+                        <p class="text-sm mt-2 font-light">
+                            Lo que antes requería llamadas y esperas, ahora es una conversación instantánea y resolutiva.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Query Volume Chart -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+                        <h3 class="font-bold px-2">VOLUMEN DE CONSULTAS</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        La adopción del chatbot ha sido masiva, demostrando la preferencia de las personas por canales digitales ágiles y la reducción de la carga en centros de atención.
+                    </p>
+                    <div style="width: 100%; height: 250px; position: relative;">
+                        <canvas id="areaChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Card 3: Response Time Reduction -->
+                <div class="md:col-span-2 bg-primary-dark text-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+                        <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+                            <h3 class="font-bold px-2">RESPUESTAS INMEDIATAS</h3>
+                        </div>
+                        <h4 class="text-3xl font-semibold mt-2">Atención sin Tiempos de Espera</h4>
+                        <p class="text-gray-300 mt-2 mb-4">
+                            El chatbot elimina las colas de espera, proporcionando información y resolviendo trámites en cuestión de segundos.
+                        </p>
+                        <div class="w-full text-center md:text-left">
+                            <span class="text-7xl font-bold text-primary-light">99%</span>
+                            <p class="text-xl font-semibold text-white">De Reducción del Tiempo de Espera</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div style="width: 100%; height: 300px; position: relative;">
+                            <canvas id="incidentChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Resolution Rate per Procedure -->
+                <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div style="width: 100%; height: 200px; position: relative;">
+                            <canvas id="horizontalBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-primary-medium text-white p-2 inline-block rounded mb-2">
+                            <h3 class="font-bold px-2">EFICIENCIA POR TRÁMITE</h3>
+                        </div>
+                        <p class="text-gray-600 mt-2">
+                            El chatbot demuestra una alta tasa de éxito en la resolución de los trámites más frecuentes, guiando al usuario paso a paso hasta su finalización.
+                        </p>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="bg-primary-dark text-white p-8 rounded-b-lg shadow-lg">
+                <div class="bg-white text-primary-dark p-2 inline-block rounded mb-4">
+                    <h3 class="font-bold px-2">MÉTRICAS DE RENDIMIENTO</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <p class="text-gray-300">
+                        El análisis continuo de las interacciones permite mejorar la IA y la experiencia del ciudadano, asegurando un servicio de alta calidad y en constante evolución.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="relative" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="transform -rotate-90" style="position: absolute;">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress1" cx="50" cy="50" r="40" stroke="#a5b4fc" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="radial-progress"/>
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-primary-light">89%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Satisfacción del Usuario</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="transform -rotate-90" style="position: absolute;">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress2" cx="50" cy="50" r="40" stroke="#ffffff" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="radial-progress"/>
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">96%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Retención (sin derivar)</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="transform -rotate-90" style="position: absolute;">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress3" cx="50" cy="50" r="40" stroke="#a5b4fc" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="radial-progress"/>
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-primary-light">94%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Comprensión de Intención</h4>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="relative" style="width: 100px; height: 100px;">
+                                <svg height="100" width="100" class="transform -rotate-90" style="position: absolute;">
+                                    <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.2)" fill="transparent" stroke-width="10"/>
+                                    <circle id="progress4" cx="50" cy="50" r="40" stroke="#ffffff" fill="transparent" stroke-width="10" 
+                                            stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" class="radial-progress"/>
+                                </svg>
+                                <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">99%</span>
+                            </div>
+                            <h4 class="mt-2 text-sm font-semibold">Disponibilidad (Uptime)</h4>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Configuración de Chart.js
+        Chart.defaults.font.family = 'system-ui, -apple-system, sans-serif';
+        Chart.defaults.font.size = 12;
+        Chart.defaults.color = '#6b7280';
+
+        // Área Chart - Volumen de Consultas
+        const areaCtx = document.getElementById('areaChart').getContext('2d');
+        new Chart(areaCtx, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [
+                    {
+                        label: 'Atención Telefónica',
+                        data: [4000, 3800, 3500, 2780, 1890, 1590],
+                        borderColor: '#a5b4fc',
+                        backgroundColor: 'rgba(165, 180, 252, 0.8)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Chatbot IA',
+                        data: [2400, 3398, 6800, 8908, 10800, 12000],
+                        borderColor: '#4338ca',
+                        backgroundColor: 'rgba(67, 56, 202, 0.8)',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 15
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: '#ffffff',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        borderRadius: 8,
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + (context.parsed.y / 1000).toFixed(1) + 'k consultas';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#6b7280',
+                            callback: function(value) {
+                                return (value / 1000) + 'k';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Bar Chart - Respuestas Inmediatas (Horizontal)
+        const incidentCtx = document.getElementById('incidentChart').getContext('2d');
+        new Chart(incidentCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Consulta Simple', 'Trámite Guiado', 'Soporte Técnico'],
+                datasets: [
+                    {
+                        label: 'Antes (Agente)',
+                        data: [5, 15, 30],
+                        backgroundColor: '#a5b4fc',
+                        borderColor: '#a5b4fc',
+                        borderWidth: 0
+                    },
+                    {
+                        label: 'Con Chatbot',
+                        data: [0.05, 0.1, 0.2],
+                        backgroundColor: '#ffffff',
+                        borderColor: '#ffffff',
+                        borderWidth: 0
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: '#ffffff',
+                            usePointStyle: true,
+                            padding: 15
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#4338ca',
+                        borderColor: '#a5b4fc',
+                        borderWidth: 1,
+                        borderRadius: 8,
+                        padding: 12,
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed.x;
+                                return context.dataset.label + ': ' + 
+                                    (value < 1 ? (value * 60).toFixed(0) + ' seg' : value.toFixed(1) + ' min');
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#e5e7eb',
+                            callback: function(value) {
+                                return value < 1 ? (value * 60).toFixed(0) + ' seg' : value.toFixed(1) + ' min';
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Tiempo de Respuesta Promedio (minutos)',
+                            color: '#e5e7eb'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#e5e7eb'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Horizontal Bar Chart - Eficiencia por Trámite
+        const horizontalBarCtx = document.getElementById('horizontalBarChart').getContext('2d');
+        new Chart(horizontalBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Consulta de Deudas', 'Pago de Impuestos', 'Solicitud de Turnos', 'Info General'],
+                datasets: [{
+                    label: 'Tasa de Resolución (%)',
+                    data: [98, 95, 91, 99],
+                    backgroundColor: '#6366f1',
+                    borderColor: '#6366f1',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: '#ffffff',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        borderRadius: 8,
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.x + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#6b7280'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Tasa de Resolución (%)',
+                            color: '#6b7280'
+                        },
+                        max: 100
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#6b7280',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Animar los círculos de progreso radial
+        function animateRadialProgress(circleId, percentage) {
+            const circle = document.getElementById(circleId);
+            const circumference = 2 * Math.PI * 40; // radio = 40
+            const offset = circumference - (percentage / 100) * circumference;
+            
+            // Aplicar animación
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+            }, 100);
+        }
+
+        // Inicializar animaciones cuando la página carga
+        window.addEventListener('load', () => {
+            animateRadialProgress('progress1', 89);
+            animateRadialProgress('progress2', 96);
+            animateRadialProgress('progress3', 94);
+            animateRadialProgress('progress4', 99);
+        });
+    </script>
+</body>
+</html>
+

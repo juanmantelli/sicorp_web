@@ -250,14 +250,17 @@
 
 /*** Service ***/
 .service-item {
-    border-radius: 30px !important;
+    border-radius: 20px !important;
     transition: all 0.3s ease;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, .05);
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+    border-color: var(--primary);
 }
 
 .service-icon {
@@ -278,6 +281,35 @@
 .service-item:hover .service-icon {
     color: #FFFFFF;
     background: var(--primary);
+}
+
+.service-icon-inline {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(33, 84, 104, 0.2);
+}
+
+.service-item:hover .service-icon-inline {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 4px 15px rgba(33, 84, 104, 0.4);
+}
+
+.service-item .btn.rounded-circle {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(33, 84, 104, 0.3);
+}
+
+.service-item .btn.rounded-circle:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 4px 15px rgba(33, 84, 104, 0.5);
+    background: var(--light) !important;
+}
+
+.service-item .btn.rounded-circle i {
+    transition: transform 0.3s ease;
+}
+
+.service-item .btn.rounded-circle:hover i {
+    transform: scale(1.2);
 }
 
 
