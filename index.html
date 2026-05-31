@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title>Sicorp</title>
+    <title>SICORP - Organizaciones Inteligentes</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Transformacion Digital, Software Empresarial, Software a Medida, ERP, Gobierno Digital, Inteligencia Artificial, Automatizacion, Gestion Empresarial, Logistica, Compras, Recursos Humanos, Organizaciones Inteligentes" name="keywords">
+    <meta content="Transformamos procesos, datos y decisiones mediante software e inteligencia artificial. Construyendo el Sistema Operativo de las Organizaciones." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,11 +14,11 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -34,521 +34,1072 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Cargando...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
 
-    <div class="container-fluid bg-dark p-0">
-        <div class="row gx-0 d-none d-lg-flex" style="padding: 5px 0;">
-            <div class="col-lg-7 px-5 text-start">
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 border-bottom border-secondary">
+        <div class="row gx-0 d-none d-lg-flex" style="padding: 6px 0; font-size: 13px;">
+            <div class="col-lg-7 px-5 text-start text-light-grey">
                 <div class="h-100 d-inline-flex align-items-center me-4">
-                    <small class="fa fa-map-marker-alt text-light me-2"></small>
-                    <small>Pellegrini , San Nicolas de los Arroyos</small>
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>San Nicolás de los Arroyos, Argentina</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <small class="far fa-clock text-light me-2"></small>
-                    <small>Lunes a Viernes : 9:00 a 15:00 hs</small>
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Lunes a Viernes: 9:00 a 15:00 hs</small>
                 </div>
             </div>
-            <div class="col-lg-5 px-5 text-end">
+            <div class="col-lg-5 px-5 text-end text-light-grey">
                 <div class="h-100 d-inline-flex align-items-center me-4">
-                    <small class="fa fa-phone-alt text-light me-2"></small>
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
                     <small>+54 9 3364027967</small>
                 </div>
-                
             </div>
         </div>
     </div>
-                
-             
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <h2 class="m-0 text-primary">Sicorp</h2>
+    <nav class="navbar navbar-expand-lg sticky-top p-0 px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center me-auto">
+            <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" style="height: 40px; margin-right: 15px;">
+            <div class="d-flex flex-column text-start">
+                <h4 class="m-0 text-white font-secondary" style="letter-spacing: 1px; font-weight: 700 !important; font-size: 20px;">SICORP</h4>
+                <small class="text-primary font-secondary" style="font-size: 9px; font-weight: 600; letter-spacing: 2px;">ORGANIZACIONES INTELIGENTES</small>
+            </div>
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">Nosotros</a>                
-                <a href="project.html" class="nav-item nav-link">Soluciones</a>
-                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                <a href="capacidades.html" class="nav-item nav-link">Capacidades</a>
+                <a href="industrias.html" class="nav-item nav-link">Industrias</a>
+                <a href="suite.html" class="nav-item nav-link">Suite SICORP</a>
+                <a href="casos.html" class="nav-item nav-link">Casos de Éxito</a>
+                <a href="ia.html" class="nav-item nav-link">SiCopilot</a>
+                <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
             </div>
+            <a href="diagnostico.html" class="btn btn-primary ms-lg-4 rounded-pill px-4 py-2" style="font-size: 14px;">Solicitar Diagnóstico</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="owl-carousel header-carousel position-relative" style="max-height: 500px;">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/DS.jpg'>">
-                <img class="img-fluid" src="img/DS.jpg" alt="" style="max-height: 500px; object-fit: cover;">
-                <div class="owl-carousel-inner" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-2 text-white animated slideInDown">Desarrollo de Software</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Creamos soluciones innovadoras utilizando tecnologías de última generación e inteligencia artificial para impulsar tu negocio al siguiente nivel</p>
-                                <a href="project.html" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver soluciones</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/seguridad.jpg'>">
-                <img class="img-fluid" src="img/seguridad.jpg" alt="" style="max-height: 500px; object-fit: cover;">
-                <div class="owl-carousel-inner" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-2 text-white animated slideInDown">Seguridad Corporativa</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Protegemos tu universo digital con soluciones de seguridad informática</p>
-                                <a href="project.html" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver soluciones</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/chatbot.jpg'>">
-                <img class="img-fluid" src="img/chatbot.jpg" alt="" style="max-height: 500px; object-fit: cover;">
-                <div class="owl-carousel-inner" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-2 text-white animated slideInDown">Chatbots Personalizados</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Automatiza la atención al cliente con chatbots inteligentes que aprenden y se adaptan a las necesidades de tu negocio</p>
-                                <a href="project.html" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Ver soluciones</a>
-                            </div>
-                        </div>
+    <!-- Hero Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s" style="background: linear-gradient(135deg, #0A1F2D 0%, #132738 100%); position: relative; overflow: hidden; min-height: 80vh; display: flex; align-items: center;">
+        <!-- Background accents -->
+        <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,211,102,0.06) 0%, rgba(0,0,0,0) 70%); top: -100px; left: -100px; z-index: 1;"></div>
+        <div style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(37,211,102,0.04) 0%, rgba(0,0,0,0) 70%); bottom: -100px; right: -100px; z-index: 1;"></div>
+        
+        <div class="container py-5" style="position: relative; z-index: 2;">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-10">
+                    <p class="text-primary font-secondary mb-3" style="letter-spacing: 4px; font-weight: 700; font-size: 14px; text-transform: uppercase;">
+                        Una organización inteligente captura, procesa, gestiona y decide mejor
+                    </p>
+                    <h1 class="display-3 text-white font-secondary mb-4 animated slideInDown" style="font-weight: 800 !important; line-height: 1.2;">
+                        ORGANIZACIONES INTELIGENTES
+                    </h1>
+                    <p class="fs-5 text-light-grey mb-5 mx-auto" style="max-width: 700px; color: var(--grey) !important; font-weight: 300;">
+                        Transformamos procesos, datos y decisiones mediante software e inteligencia artificial para potenciar la evolución de tu organización.
+                    </p>
+                    <div class="d-flex justify-content-center flex-column flex-sm-row gap-3">
+                        <a href="diagnostico.html" class="btn btn-primary py-3 px-5 rounded">Solicitar Diagnóstico SICORP</a>
+                        <a href="capacidades.html" class="btn btn-outline-primary py-3 px-5 rounded">Conocer Capacidades</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Hero End -->
 
 
-    <!-- Feature Start -->
+    <!-- El Problema Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5 justify-content-center space-around">
-                <div class="col-md-4 col-lg-3 mb-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-clock text-white"></i>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div style="border-left: 4px solid var(--primary); padding-left: 25px;">
+                        <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">El Punto de Partida</h6>
+                        <h2 class="mb-4 display-6" style="font-weight: 700 !important;">Las organizaciones no fracasan por falta de esfuerzo.</h2>
+                    </div>
+                    <p class="mb-4" style="font-size: 1.15rem; line-height: 1.8; color: var(--white) !important;">
+                        Fracasan cuando las personas deben tomar decisiones importantes con información incompleta, procesos desconectados y herramientas que no reflejan la realidad de su operación.
+                    </p>
+                    <p class="mb-4">
+                        Los sistemas aislados, las planillas paralelas y la duplicación de datos generan fricciones diarias, retrabajos y costos ocultos que ralentizan el crecimiento organizacional.
+                    </p>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-4" style="background: rgba(19, 39, 56, 0.4); border: 1px solid var(--glass-border); border-radius: 8px;">
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 btn-lg-square bg-dark rounded-circle me-3 border border-secondary">
+                                <i class="fa fa-exclamation-triangle text-danger"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Información Incompleta</h5>
+                                <p class="mb-0">Datos dispersos, reportes tardíos y baja visibilidad para decidir con certeza en el momento clave.</p>
+                            </div>
                         </div>
-                        <h1 class="mb-0" data-toggle="counter-up">99.9</h1><span class="ms-1">%</span>
-                    </div>
-                    <h5 class="mb-3">Uptime</h5>
-                    <span>Garantizamos una disponibilidad del 99.9% en nuestros servicios</span>
-                </div>
-                <div class="col-md-4 col-lg-3 mb-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-smile text-white"></i>
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 btn-lg-square bg-dark rounded-circle me-3 border border-secondary">
+                                <i class="fa fa-unlink text-warning"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Procesos Desconectados</h5>
+                                <p class="mb-0">Áreas que operan de forma aislada, trabajando con versiones totalmente distintas de la misma realidad.</p>
+                            </div>
                         </div>
-                        <h1 class="mb-0" data-toggle="counter-up">98</h1><span class="ms-1">%</span>
-                    </div>
-                    <h5 class="mb-3">Satisfacción</h5>
-                    <span>Nivel de satisfacción de nuestros clientes</span>
-                </div>
-                <div class="col-md-4 col-lg-3 mb-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-rocket text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">15</h1><span class="ms-1">min</span>
-                    </div>
-                    <h5 class="mb-3">Tiempo de Respuesta</h5>
-                    <span>Tiempo promedio de respuesta ante incidencias críticas</span>
-                </div>
-                <div class="col-md-4 col-lg-3 mb-4 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="btn-lg-square bg-primary rounded-circle me-3">
-                            <i class="fa fa-shield-alt text-white"></i>
-                        </div>
-                        <h1 class="mb-0" data-toggle="counter-up">100</h1><span class="ms-1">%</span>
-                    </div>
-                    <h5 class="mb-3">Seguridad</h5>
-                    <span>Tasa de prevención de incidentes de seguridad en el último año</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature Start -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container about px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/aboutus.png" style="object-fit: cover;" alt="Equipo Sicorp trabajando">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <h6 class="text-primary">Nosotros</h6>
-                        <h1 class="mb-4">Innovación y Experiencia desde 2015</h1>
-                        <p>En SICORP, transformamos desafíos en soluciones tecnológicas innovadoras. Con más de 100 proyectos exitosos y un equipo de expertos certificados, nos destacamos por:</p>
-                        
-                        <div class="mb-4">
-                            <p class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check-circle text-primary me-3"></i>
-                                <span><strong>Innovación Constante:</strong> Implementamos las últimas tecnologías como IA, blockchain y cloud computing.</span>
-                            </p>
-                            <p class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check-circle text-primary me-3"></i>
-                                <span><strong>Metodología Ágil:</strong> Desarrollo iterativo con entregas continuas y feedback constante.</span>
-                            </p>
-                            <p class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check-circle text-primary me-3"></i>
-                                <span><strong>Equipo Especializado:</strong> Profesionales certificados en las principales tecnologías del mercado.</span>
-                            </p>
-                            <p class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check-circle text-primary me-3"></i>
-                                <span><strong>Compromiso con Resultados:</strong> 98% de satisfacción en nuestros proyectos entregados.</span>
-                            </p>
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square bg-dark rounded-circle me-3 border border-secondary">
+                                <i class="fa fa-folder-open text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Herramientas Aisladas</h5>
+                                <p class="mb-0">Sistemas obsoletos y tareas manuales recurrentes que restan productividad a tus mejores colaboradores.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- El Problema End -->
 
 
-    <!-- Service Start -->
+    <!-- Con quién trabajamos Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">¿Con quién trabajamos?</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Identidad y Enfoque Compartido</h1>
+                <p>Nuestras capacidades y plataformas se adaptan a la realidad de diferentes tipos de organizaciones que buscan operar al máximo nivel.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-bank fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Gobiernos</h4>
+                        <p class="mb-0">Modernización de procesos públicos, transparencia administrativa y servicios digitales eficientes para los ciudadanos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-truck fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Empresas de Logística</h4>
+                        <p class="mb-0">Control total de flotas móviles, asignación inteligente de despachos y auditoría de combustible en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-box-seam fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Distribuidores</h4>
+                        <p class="mb-0">Integración ágil entre preventa en calle, gestión en depósitos y cobranza móvil en rutas de entrega.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-gear fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Industria</h4>
+                        <p class="mb-0">Centralización de inventarios, automatización de abastecimiento y trazabilidad exacta de costos de producción.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-shop fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Comercio</h4>
+                        <p class="mb-0">Gestión integrada de sucursales, facturación fiscal automática y control de stock comercial unificado.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100 text-center">
+                        <div class="btn-lg-square bg-dark text-primary rounded-circle mx-auto mb-4 border border-primary">
+                            <i class="bi bi-people fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Servicios</h4>
+                        <p class="mb-0">Administración de colaboradores, asistencia, legajo digital y liquidación transparente de novedades operativas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Con quién trabajamos End -->
+
+
+    <!-- Nuestra Visión Start -->
+    <div class="container-xxl py-5">
+        <div class="container text-center">
+            <div class="mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Nuestra Visión</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Las 4 Capacidades Fundamentales</h1>
+                <p>Una organización inteligente necesita capturar información fiable, procesar los datos de manera útil, gestionar recursos y decidir con certeza estratégica.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-4 border border-secondary rounded bg-dark">
+                        <h3 class="text-primary mb-2 font-secondary" style="font-size: 2.5rem; font-weight: 800 !important;">01</h3>
+                        <h5 class="mb-2">Capturar</h5>
+                        <p class="small mb-0 text-muted">Registrar la realidad con información confiable desde la fuente.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="p-4 border border-secondary rounded bg-dark">
+                        <h3 class="text-primary mb-2 font-secondary" style="font-size: 2.5rem; font-weight: 800 !important;">02</h3>
+                        <h5 class="mb-2">Procesar</h5>
+                        <p class="small mb-0 text-muted">Sincronizar y transformar flujos de datos en información útil.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-4 border border-secondary rounded bg-dark">
+                        <h3 class="text-primary mb-2 font-secondary" style="font-size: 2.5rem; font-weight: 800 !important;">03</h3>
+                        <h5 class="mb-2">Gestionar</h5>
+                        <p class="small mb-0 text-muted">Centralizar operaciones, recursos y procesos unificados.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="p-4 border border-secondary rounded bg-dark">
+                        <h3 class="text-primary mb-2 font-secondary" style="font-size: 2.5rem; font-weight: 800 !important;">04</h3>
+                        <h5 class="mb-2">Decidir</h5>
+                        <p class="small mb-0 text-muted">Convertir información en decisiones ágiles y acciones directas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center mt-5 fs-5 gap-2 text-primary font-bold flex-wrap">
+                <span>Capturar</span>
+                <i class="fa fa-arrow-right d-none d-sm-inline"></i>
+                <span>Procesar</span>
+                <i class="fa fa-arrow-right d-none d-sm-inline"></i>
+                <span>Gestionar</span>
+                <i class="fa fa-arrow-right d-none d-sm-inline"></i>
+                <span>Decidir</span>
+            </div>
+        </div>
+    </div>
+    <!-- Nuestra Visión End -->
+
+
+    <!-- ¿Por qué SICORP? Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">¿Por qué SICORP?</h6>
+                    <h1 class="mb-4 display-6" style="font-weight: 700 !important;">Un enfoque en resultados, no en software.</h1>
+                    <p class="mb-4">
+                        Creemos que la tecnología debe ser el habilitador que acompañe la estructura de tu empresa, no un obstáculo operativo.
+                    </p>
+                    <a href="nosotros.html" class="btn btn-outline-primary rounded-pill py-3 px-5">Saber más sobre nosotros</a>
+                </div>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="row g-4">
+                        <div class="col-md-12">
+                            <div class="p-4 bg-dark border border-secondary rounded">
+                                <h4 class="mb-2 text-primary"><i class="fa fa-sitemap me-3"></i>Entendemos Organizaciones</h4>
+                                <p class="mb-0">Llevamos más de 10 años analizando la realidad operativa de organizaciones públicas y privadas para resolver cuellos de botella reales en su raíz.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="p-4 bg-dark border border-secondary rounded">
+                                <h4 class="mb-2 text-primary"><i class="fa fa-cubes me-3"></i>Construimos Tecnología Propia</h4>
+                                <p class="mb-0">La Suite SICORP es un ecosistema propietario modular desarrollado para integrarse de forma fluida y flexible a tus procesos operacionales particulares.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="p-4 bg-dark border border-secondary rounded">
+                                <h4 class="mb-2 text-primary"><i class="fa fa-bolt me-3"></i>Aplicamos IA donde genera impacto real</h4>
+                                <p class="mb-0">Implementamos agentes inteligentes y análisis predictivos en puntos estratégicos donde la inteligencia artificial genera valor de negocio, nunca por simple moda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ¿Por qué SICORP? End -->
+
+
+    <!-- Cómo Trabajamos Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Nuestros Servicios</h6>
-               
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Cómo Trabajamos</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Relación a Largo Plazo y Enfoque Humano</h1>
+                <p>Nuestra metodología no persigue la venta de un módulo. Busca comprender tu realidad y acompañar el proceso de evolución en cada paso.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/DS.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-solar-panel fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Desarrollo de Software</h4>
-                            <p>Desarrollo personalizados para satisfacer las necesidades de tu negocio. Nuestro equipo de expertos desarrolla soluciones que mejoran la eficiencia y promueven el crecimiento empresarial. Desde aplicaciones web y móviles hasta sistemas integrados, brindamos un enfoque integral que abarca el diseño, implementación y el soporte.</p>
-                        </div>
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="text-primary font-bold mb-3 fs-3">01.</div>
+                        <h5 class="mb-3">Entendemos la realidad</h5>
+                        <p class="mb-0 small text-muted">No vendemos software antes de comprender a fondo la operación real, recorriendo el terreno junto a tus equipos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="text-primary font-bold mb-3 fs-3">02.</div>
+                        <h5 class="mb-3">Diseñamos junto al cliente</h5>
+                        <p class="mb-0 small text-muted">La tecnología debe adaptarse plenamente a tu organización, respetando tu cultura y metodologías de trabajo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded overflow-hidden">
-                        <img class="img-fluid" src="img/seguridad.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;">
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-wind fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Seguridad Coorporativa</h4>
-                            <p>En el mundo digital actual, la seguridad es primordial y fundamental. En SICORP SRL, protegemos tu universo digital con soluciones de seguridad informática de vanguardia para salvaguardar cada clic, dato y transacción frente a cualquier amenaza cibernética. Con nuestro equipo de expertos, tu empresa está protegida.</p>
-                        </div>
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="text-primary font-bold mb-3 fs-3">03.</div>
+                        <h5 class="mb-3">Implementamos gradual</h5>
+                        <p class="mb-0 small text-muted">Dividimos el proyecto en etapas lógicas y ágiles, buscando entregar valor y resultados desde la primera fase activa.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded overflow-hidden">
-                        <div style="position: relative; height: 250px;">
-                            <img class="img-fluid" src="img/chatbot.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;">
-                            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3);"></div>
-                        </div>
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-robot fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Chatbots Personalizados</h4>
-                            <p>Revoluciona la atención al cliente con nuestros chatbots inteligentes personalizados. Desarrollamos asistentes virtuales que aprenden y se adaptan a tu negocio, ofreciendo respuestas precisas 24/7. Optimiza recursos, mejora la satisfacción del cliente y automatiza tareas repetitivas con tecnología de vanguardia en IA.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded overflow-hidden">
-                        <div style="position: relative; height: 250px; background: linear-gradient(135deg, #215468 0%, #3F9FC4 100%); display: flex; align-items: center; justify-content: center;">
-                            <i class="fa fa-brain fa-5x text-white" style="opacity: 0.3;"></i>
-                        </div>
-                        <div class="position-relative p-4 pt-0">
-                            <div class="service-icon">
-                                <i class="fa fa-brain fa-3x"></i>
-                            </div>
-                            <h4 class="mb-3">Inteligencia Artificial</h4>
-                            <p>Potencia tu negocio con soluciones de IA de última generación. Desarrollamos sistemas inteligentes para procesamiento de documentos, análisis de datos, automatización de procesos y toma de decisiones inteligente. Nuestras soluciones de IA aprenden y se adaptan, transformando la forma en que trabajas y optimizando cada proceso empresarial.</p>
-                        </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="text-primary font-bold mb-3 fs-3">04.</div>
+                        <h5 class="mb-3">Evolucionamos continuo</h5>
+                        <p class="mb-0 small text-muted">Una vez en producción, iniciamos un ciclo continuo de monitoreo, aprendizaje y mejoras para acompañar tu crecimiento.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Cómo Trabajamos End -->
 
 
-    <!-- Feature Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container feature px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="p-lg-5 ps-lg-0">
-                        <h6 class="text-primary">Porque elegirnos?</h6>
-                        <h1 class="mb-4"> Nos adaptamos a tus necesidades </h1>
-                        <p class="mb-4 pb-2">Nos distinguimos por nuestro enfoque personalizado y nuestra dedicación a la excelencia. Nuestro equipo joven, energético y creativo está siempre a la vanguardia de las tendencias tecnológicas, asegurando que nuestros clientes reciban soluciones innovadoras y de alta calidad. Nos especializamos en desarrollar software adaptado a las necesidades específicas de cada empresa, lo que nos permite ofrecer un servicio excepcional y resultados que superan las expectativas.
-
-                            Elegirnos significa optar por una empresa que no solo entiende la tecnología, sino que también comprende la importancia de un servicio cercano y personalizado. Trabajamos estrechamente con nuestros clientes para conocer sus desafíos y objetivos, y así desarrollar herramientas que realmente impacten y mejoren sus procesos internos y externos. Con un compromiso firme con la calidad y la satisfacción del cliente, SICORP SRL es su socio ideal para llevar su empresa al siguiente nivel.</p>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-check text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Servicios de</p>
-                                        <h5 class="mb-0">Calidad</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-user-check text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Analistas</p>
-                                        <h5 class="mb-0">Expertos</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-drafting-compass text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Presupuestos</p>
-                                        <h5 class="mb-0">Sin Cargo</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-headphones text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Últimas</p>
-                                        <h5 class="mb-0">Tecnologías</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Lo que NO hacemos Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Diferenciador Absoluto</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Lo que NO Hacemos</h1>
+                <p>Nuestra ética y enfoque se basan tanto en lo que aportamos como en las malas prácticas tradicionales que evitamos decididamente.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="no-item">
+                        <div class="no-icon"><i class="fa-solid fa-ban"></i></div>
+                        <h5 class="mb-3 text-white">No vendemos IA por moda</h5>
+                        <p class="mb-0 small text-muted">No integramos chatbots o agentes automatizados que solo sumen complejidad cosmética. Aplicamos IA únicamente cuando resuelve un proceso crítico.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/CAROUSEL-1.png" style="object-fit: cover;" alt="">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="no-item">
+                        <div class="no-icon"><i class="fa-solid fa-ban"></i></div>
+                        <h5 class="mb-3 text-white">No hacemos proyectos eternos</h5>
+                        <p class="mb-0 small text-muted">Evitamos consultorías infinitas sin metas claras. Creemos en entregas rápidas y tangibles que permitan operar y aprender de forma iterativa.</p>
                     </div>
                 </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="no-item">
+                        <div class="no-icon"><i class="fa-solid fa-ban"></i></div>
+                        <h5 class="mb-3 text-white">No imponemos sistemas genéricos</h5>
+                        <p class="mb-0 small text-muted">Rechazamos los software enlatados y rígidos que obligan a tu organización a forzar o deformar sus procesos productivos reales para poder usarlos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
+                <h4 class="text-primary font-secondary" style="font-style: italic; font-weight: 600;">"La realidad primero. La tecnología después."</h4>
             </div>
         </div>
     </div>
-    <!-- Feature End -->
+    <!-- Lo que NO hacemos End -->
 
-      <!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h6 class="text-primary">Parte de nuestro equipo</h6>
-            <h1 class="mb-4"></h1>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="rounded overflow-hidden">
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="img/team-4.png" alt="" style="width: 200px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h5>Leandro</h5>
-                        <span>Co-Founder & CEO</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="rounded overflow-hidden">
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="img/team-1.png" alt="" style="width: 200px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h5>Juan Pablo</h5>
-                        <span>Co-Founder & CTO</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="rounded overflow-hidden">
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="img/team-2.png" alt="" style="width: 200px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h5>Braian</h5>
-                        <span>Desarrollador FullStack</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="rounded overflow-hidden">
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="img/team-5.png" alt="" style="width: 200px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h5>Martina</h5>
-                        <span>Desarrollador FullStack</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="rounded overflow-hidden">
-                    <div class="d-flex justify-content-center">
-                        <img class="img-fluid" src="img/team-6.png" alt="" style="width: 200px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h5>Daniel</h5>
-                        <span>Desarrollador FullStack</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
 
-    <!-- Clients Start -->
+    <!-- Capacidades Organizacionales Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Nuestros Clientes</h6>
-                <h1 class="mb-4">Empresas que confían en nosotros</h1>
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">El Corazón de SICORP</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Construyendo Organizaciones Inteligentes</h1>
+                <p>No desarrollamos software aislado. Desarrollamos capacidades organizacionales estructuradas para gobernar, operar y liderar con información.</p>
             </div>
-            <div class="owl-carousel client-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/sn_logo.png" alt="Municipalidad de San Nicolas">
-                        <div class="client-overlay">
-                            <p class="client-name">Municipalidad de San Nicolás</p>
+            <div class="row g-4">
+                <!-- Capacidad 1 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-landmark"></i></div>
+                                <h5 class="m-0">Gobierno Inteligente</h5>
+                            </div>
+                            <p class="small">Digitalizamos procesos públicos para agilizar habilitaciones comerciales e inspecciones, aportando transparencia y trazabilidad a la gestión.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> Municipalidad de San Nicolás + SiCopilot
+                            </div>
                         </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/ramallo_logo.png" alt="Municipalidad de Ramallo">
-                        <div class="client-overlay">
-                            <p class="client-name">Municipalidad de Ramallo</p>
+                <!-- Capacidad 2 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-users"></i></div>
+                                <h5 class="m-0">Personas Inteligentes</h5>
+                            </div>
+                            <p class="small">Centralizamos legajos, asistencia y novedades operativas de colaboradores en ruta, convirtiendo datos aislados en liquidaciones precisas.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> ENTRE + SiCopilot
+                            </div>
                         </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/sijam_logo.jpg" alt="Sijam" style="max-height: 150px; width: auto; object-fit: contain;">
-                        <div class="client-overlay">
-                            <p class="client-name">Sijam</p>
+                <!-- Capacidad 3 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-cogs"></i></div>
+                                <h5 class="m-0">Operaciones Inteligentes</h5>
+                            </div>
+                            <p class="small">Integramos compras, solicitudes, stock y tesorería en un ERP centralizado para unificar la toma de decisiones críticas.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> SIJAM + SiCopilot
+                            </div>
                         </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/ligier_logo.png" alt="Ligier">
-                        <div class="client-overlay">
-                            <p class="client-name">Ligier</p>
+                <!-- Capacidad 4 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-truck"></i></div>
+                                <h5 class="m-0">Logística Inteligente</h5>
+                            </div>
+                            <p class="small">Conectamos la fuerza de ventas, el depósito, la administración y la distribución de flotas móviles con información en ruta en tiempo real.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> Grupo Alpina + SiCopilot
+                            </div>
                         </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/grupobee_logo.jpg" alt="Grupo Bee">
-                        <div class="client-overlay">
-                            <p class="client-name">Grupo Bee</p>
+                <!-- Capacidad 5 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-shopping-bag"></i></div>
+                                <h5 class="m-0">Comercio Inteligente</h5>
+                            </div>
+                            <p class="small">Optimizamos la rentabilidad integrando sucursales, facturación fiscal directa, control de stock físico e inventario comercial digitalizado.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> VER by Mercedes Toraglio + SiCopilot
+                            </div>
                         </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/entre_logo.svg" alt="Entre" style="width: 80px; height: auto;">
-                        <div class="client-overlay">
-                            <p class="client-name">Entre</p>
+                <!-- Capacidad 6 -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3"><i class="fa fa-shopping-cart"></i></div>
+                                <h5 class="m-0">Compras Inteligentes</h5>
+                            </div>
+                            <p class="small">Centralizamos portales de proveedores, cotizaciones, órdenes de compra y facturación digital en un circuito seguro y auditable.</p>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary" style="font-size: 11px;">
+                                <span class="text-primary">Caso de Éxito:</span> Municipalidad de San Nicolás + SiCopilot
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/gonzema-logo.png" alt="Gonzema SA">
-                        <div class="client-overlay">
-                            <p class="client-name">Gonzema SA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="client-item">
-                    <div class="client-image-wrapper">
-                        <img class="img-fluid" src="img/carsil-logo.png" alt="Carsil SRL">
-                        <div class="client-overlay">
-                            <p class="client-name">Carsil SRL</p>
-                        </div>
+                        <a href="capacidades.html" class="btn btn-sm btn-outline-primary mt-3 align-self-start">Ver capacidad</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Clients End -->
+    <!-- Capacidades Organizacionales End -->
+
+
+    <!-- Clientes Confían Start -->
+    <div class="container-xxl py-5 clientes-trust-section">
+        <div class="container text-center">
+            <div class="mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px; font-weight: 700 !important;">ORGANIZACIONES QUE EVOLUCIONAN JUNTO A SICORP</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Organizaciones que transforman sus operaciones con SICORP</h1>
+            </div>
+            <!-- Logo wall container (Perfect 5 Columns Grid - 100% Symmetrical on all devices) -->
+            <div class="row row-cols-2 row-cols-md-5 row-cols-lg-5 g-4 align-items-center justify-content-center mb-4">
+                <div class="col wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/Municipalidad.png" alt="Municipalidad de San Nicolás" style="max-height: 48px; max-width: 88%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/Entre_logo.png" alt="ENTRE" style="max-height: 60px; max-width: 75%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/logo_sijam.png" alt="SIJAM" style="max-height: 40px; max-width: 85%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/logo_grupo_alpina.png" alt="Grupo Alpina" style="max-height: 52px; max-width: 80%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/logo_carsil.png" alt="CARSIL" style="max-height: 45px; max-width: 80%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/Punto Avicola.png" alt="Punto Avícola" style="max-height: 68px; max-width: 75%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/Grupo Quiroga.png" alt="Grupo Quiroga" style="max-height: 58px; max-width: 88%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/logo_grupo_bee.png" alt="Grupo Bee" style="max-height: 42px; max-width: 80%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/Gonzema.png" alt="Grupo Gonzema" style="max-height: 40px; max-width: 88%;">
+                    </div>
+                </div>
+                <div class="col wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="logo-card">
+                        <img class="logo-img" src="Logos Clientes/logo_ver.png" alt="VER" style="max-height: 52px; max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+            <!-- Trayectory backup message -->
+            <p class="mt-4 small wow fadeInUp text-muted-dark" data-wow-delay="0.2s" style="font-weight: 500; font-size: 16px; opacity: 0.9; max-width: 950px; margin: 0 auto; line-height: 1.7;">
+                Más de 10 años acompañando organizaciones públicas y privadas en sus procesos de transformación digital. Organizaciones de distintos sectores confían en SICORP para conectar procesos, personas y decisiones mediante tecnología e inteligencia artificial.
+            </p>
+        </div>
+    </div>
+    <!-- Clientes Confían End -->
+
+
+    <!-- Resultados e Impacto Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Trayectoria Comprobable</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Resultados e Impacto Sostenible</h1>
+                <p>Nuestra historia se cuenta a través de la solidez y operatividad diaria de nuestros clientes, garantizando estabilidad empresarial y gubernamental.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa fa-history"></i></div>
+                        <div class="impact-text">Más de 10 años acompañando organizaciones en su transformación digital</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa fa-city"></i></div>
+                        <div class="impact-text">Presencia activa en organizaciones públicas y privadas a gran escala</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa fa-network-wired"></i></div>
+                        <div class="impact-text">Miles de procesos operacionales digitalizados y simplificados</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa fa-server"></i></div>
+                        <div class="impact-text">Operaciones críticas y flujos financieros complejos gestionados con total estabilidad</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa fa-users-cog"></i></div>
+                        <div class="impact-text">Equipos completamente conectados en ruta y planta mediante información en tiempo real</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Resultados e Impacto End -->
+
+
+    <!-- Casos Consolidados Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Casos de Éxito Consolidados</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Experiencia en Acción Real</h1>
+                <p>Conoce los desafíos superados, la tecnología desplegada y los resultados comerciales medibles de nuestras implementaciones insignia.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Caso 1 -->
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark border border-secondary text-primary font-secondary py-2 px-3"><i class="fa fa-building-columns me-1.5"></i> GOBIERNO DIGITAL Y COMPRAS</span>
+                            <small class="text-muted">SiHabs + SiProv + SiEscri</small>
+                        </div>
+                        <h4 class="mb-3 text-white">Municipalidad de San Nicolás</h4>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Situación:</strong> Procesos manuales en papel para habilitaciones comerciales, registro físico de proveedores y falta de integración digital interdepartamental.
+                        </div>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Solución:</strong> Digitalización íntegra del ciclo de vida del comerciante, portal documental de proveedores y flujos legales digitales con firma electrónica.
+                        </div>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Resultado:</strong> Trazabilidad del 100% de expedientes públicos, habilitaciones más ágiles y reducción drástica de tiempos administrativos municipales.
+                        </div>
+                        <a href="sicorp-solucion-san-nicolas.html" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Leer caso completo</a>
+                    </div>
+                </div>
+                <!-- Caso 2 -->
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark border border-secondary text-primary font-secondary py-2 px-3"><i class="fa fa-users-gear me-1.5"></i> GESTIÓN INTELIGENTE DE PERSONAS Y OPERACIONES</span>
+                            <small class="text-muted">SiSync + SiCopilot</small>
+                        </div>
+                        <h4 class="mb-3 text-white">ENTRE</h4>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Situación:</strong> Administración de personal operativo distribuido en múltiples ciudades y clientes, con datos provenientes de controles de accesos en plantas industriales que exigían conciliación manual.
+                        </div>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Solución:</strong> Implementación de SiSync para la integración y procesamiento automático de datos procedentes de múltiples fuentes externas. Conectado a Legajo Digital y alertas predictivas de SiCopilot.
+                        </div>
+                        <div class="mb-3 small">
+                            <strong class="text-primary">Resultado:</strong> Centralización total de legajos, novedades de RRHH y ausentismo en vivo. Procesamiento automatizado que reduce el trabajo manual de días a cuestión de pocas horas.
+                        </div>
+                        <a href="sicorp-solucion-entre.html" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Leer caso completo</a>
+                    </div>
+                </div>
+                <!-- Caso 3 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark border border-secondary text-primary font-secondary py-2 px-3"><i class="fa fa-network-wired me-1.5"></i> INTEGRACIÓN OPERATIVA INTELIGENTE</span>
+                            <small class="text-muted">SiSync + SiCheck + SiCopilot</small>
+                        </div>
+                        <h5 class="mb-3 text-white">SIJAM</h5>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Situación:</strong> Consolidación de información de múltiples plantas industriales y contratos. Cada una con archivos, formatos y reglas particulares por convenio, puesto y operación.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Solución:</strong> Implementación de SiCheck para captura de personal y SiSync para procesamiento automático y consolidación de datos según reglas operativas. SiCopilot asiste en la detección de anomalías.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Resultado:</strong> Procesamiento de días automatizado en horas, eliminando planillas manuales y logrando total trazabilidad de liquidaciones por centro de costo.
+                        </div>
+                        <a href="sicorp-solucion-sijam.html" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Ver caso</a>
+                    </div>
+                </div>
+                <!-- Caso 4 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark border border-secondary text-primary font-secondary py-2 px-3"><i class="fa fa-boxes-stacked me-1.5"></i> LOGÍSTICA Y DISTRIBUCIÓN INTELIGENTE</span>
+                            <small class="text-muted">SiERP + SiStore + SiFleet + SiCopilot</small>
+                        </div>
+                        <h5 class="mb-3 text-white">Grupo Alpina</h5>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Situación:</strong> Vendedores, depósito, distribución y tesorería operando de forma aislada y parcial, sin stock actualizado en calle ni control de cobranzas en ruta.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Solución:</strong> Ecosistema unificado conectando la fuerza de ventas con SiStore, la administración con SiERP y el reparto móvil con SiFleet. SiCopilot asiste en la optimización logística.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Resultado:</strong> Sincronización completa en tiempo real de stock comercial, despachos ágiles, cobranza digital en calle y un dashboard gerencial unificado.
+                        </div>
+                        <a href="sicorp-solucion-grupo-alpina.html" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Ver caso</a>
+                    </div>
+                </div>
+                <!-- Caso 5 -->
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark border border-secondary text-primary font-secondary py-2 px-3"><i class="fa fa-store me-1.5"></i> COMERCIO INTELIGENTE</span>
+                            <small class="text-muted">SiStore + SiERP</small>
+                        </div>
+                        <h5 class="mb-3 text-white">VER by Mercedes Toraglio</h5>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Situación:</strong> Administración comercial dependiente de controles físicos y planillas manuales para stock, caja y cuentas corrientes.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Solución:</strong> Implementación de plataforma de comercio inteligente conectando punto de venta fiscal, stock físico y flujo financiero.
+                        </div>
+                        <div class="mb-2 small">
+                            <strong class="text-primary">Resultado:</strong> Visibilidad comercial unificada, liquidación diaria veloz y control total de la rentabilidad del negocio.
+                        </div>
+                        <a href="sicorp-solucion-ver-by-mt.html" class="btn btn-sm btn-outline-primary mt-auto align-self-start">Ver caso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Casos Consolidados End -->
+
+
+    <!-- Ecosistema SICORP Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Suite Conectada</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">El Ecosistema Conectado SICORP</h1>
+                <p class="fs-5 text-muted">Cada capacidad del ecosistema SICORP fue diseñada para trabajar de forma integrada. Personas, operaciones, logística, comercio, gobierno y datos comparten información en tiempo real para construir organizaciones más inteligentes.</p>
+            </div>
+            
+            <div class="ecosystem-container wow fadeIn" data-wow-delay="0.3s">
+                <!-- Lienzo de Conexiones SVG -->
+                <svg class="ecosystem-svg-lines" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Filtro de resplandor sutil para flujos -->
+                        <filter id="glow-light-index" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="1.5" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    
+                    <!-- Líneas de Conexión (Curvas e Integraciones Sutiles) -->
+                    <!-- Capa de Inteligencia (SiCopilot -> SICORP Nucleus) -->
+                    <path d="M450,45 L450,310" class="ecosystem-flow-line intelligence-line"></path>
+                    
+                    <!-- Primera Línea (SiCheck, SiERP, SiFleet -> Nucleus) -->
+                    <path d="M150,175 Q250,220 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,175 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,175 Q650,220 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Segunda Línea (SiProv, SiSync, SiStore -> Nucleus) -->
+                    <path d="M150,445 Q250,380 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,445 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,445 Q650,380 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Tercera Línea (SiTicket, SiHabs, SiEscri -> Nucleus) -->
+                    <path d="M150,565 C200,530 250,420 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,565 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,565 C700,530 650,420 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Nodos de Datos / Luz Premium (Animaciones Lentas y Livianas) -->
+                    <!-- Inteligencia Superior a SICORP -->
+                    <circle r="3" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M450,45 L450,310" />
+                    </circle>
+                    
+                    <!-- Flujos de las plataformas hacia el Núcleo (y viceversa) con desfase de tiempos para naturalidad -->
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="11s" repeatCount="indefinite" path="M150,175 Q250,220 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="9.5s" repeatCount="indefinite" path="M450,175 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="12s" repeatCount="indefinite" path="M750,175 Q650,220 450,310" />
+                    </circle>
+                    
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="10.5s" repeatCount="indefinite" path="M150,445 Q250,380 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="9s" repeatCount="indefinite" path="M450,445 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="11.5s" repeatCount="indefinite" path="M750,445 Q650,380 450,310" />
+                    </circle>
+                    
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="13s" repeatCount="indefinite" path="M150,565 C200,530 250,420 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="10s" repeatCount="indefinite" path="M450,565 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-index)">
+                        <animateMotion dur="14s" repeatCount="indefinite" path="M750,565 C700,530 650,420 450,310" />
+                    </circle>
+                </svg>
+
+                <div class="ecosystem-grid">
+                    <!-- Layer 1: Capa Superior (Inteligencia) -->
+                    <a href="ia.html" class="ecosystem-node copilot">
+                        <div class="copilot-badge"><i class="fa fa-circle-nodes me-1.5"></i> Centro de Inteligencia</div>
+                        <h5 class="text-primary">SiCopilot</h5>
+                        <p class="copilot-subtitle">Observa · Aprende · Analiza · Potencia</p>
+                        <span class="copilot-description">La capa de inteligencia que unifica y optimiza cada capacidad de la organización en tiempo real.</span>
+                    </a>
+                    
+                    <!-- Layer 2: Primera Línea -->
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiCheck</h5>
+                        <span>Personas Inteligentes</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiERP</h5>
+                        <span>Operaciones Inteligentes</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiFleet</h5>
+                        <span>Logística Inteligente</span>
+                    </a>
+                    
+                    <!-- Layer 3: Núcleo (SICORP) -->
+                    <div class="ecosystem-placeholder d-none d-md-block"></div>
+                    <div class="ecosystem-hub-nucleus">
+                        <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo">
+                        <h5>SICORP</h5>
+                        <span>ORGANIZACIONES INTELIGENTES</span>
+                    </div>
+                    <div class="ecosystem-placeholder d-none d-md-block"></div>
+                    
+                    <!-- Layer 4: Segunda Línea -->
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiProv</h5>
+                        <span>Compras Inteligentes</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiSync</h5>
+                        <span>Conectividad Inteligente</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiStore</h5>
+                        <span>Comercio Inteligente</span>
+                    </a>
+                    
+                    <!-- Layer 5: Tercera Línea -->
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiTicket</h5>
+                        <span>Gestión y Soporte</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiHabs</h5>
+                        <span>Gobierno Digital</span>
+                    </a>
+                    <a href="suite.html" class="ecosystem-node">
+                        <h5>SiEscri</h5>
+                        <span>Procesos Legales Digitales</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.4s">
+                <p class="ecosystem-footer-phrase">La inteligencia surge cuando toda la organización trabaja conectada.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Ecosistema SICORP End -->
+
+
+    <!-- SiCopilot Bloque Destacado Start -->
+    <div class="container-xxl py-5 bg-dark border-top border-bottom border-secondary" style="background: linear-gradient(135deg, rgba(37,211,102,0.05) 0%, rgba(19, 39, 56, 0.4) 100%) !important;">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="badge bg-dark border border-primary text-primary font-secondary py-2 px-3 mb-3" style="font-weight: 600;">INTEGRACIÓN NATIVA</div>
+                    <h2 class="text-white mb-4 display-6 font-secondary" style="font-weight: 700 !important;">SiCopilot: Centro de Inteligencia</h2>
+                    <p class="mb-3 fs-5 text-white" style="font-weight: 600; line-height: 1.4;">
+                        La mayoría de los sistemas almacenan información. SiCopilot la transforma en decisiones.
+                    </p>
+                    <p class="mb-4">
+                        Analiza información proveniente de personas, operaciones, logística, compras, comercio y gobierno para detectar oportunidades, anomalías y acciones de mejora en tiempo real.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Detecta anomalías</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Sugiere acciones</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Automatiza controles</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Aprende de la operación</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Conecta información entre áreas</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0 small"><i class="fa fa-check text-primary me-2"></i>Asiste la toma de decisiones</p>
+                        </div>
+                    </div>
+                    <a href="ia.html" class="btn btn-primary py-3 px-5 rounded">Conocer SiCopilot</a>
+                </div>
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-4 p-md-5 bg-dark border border-secondary rounded position-relative" style="box-shadow: 0 0 40px rgba(37, 211, 102, 0.08) !important; overflow: hidden; background: linear-gradient(180deg, rgba(10, 31, 45, 0.8) 0%, rgba(5, 13, 20, 0.95) 100%) !important;">
+                        
+                        <div class="copilot-command-center">
+                            <div class="command-grid-layout">
+                                <!-- Columna Izquierda: 3 Capacidades -->
+                                <div class="command-col-left">
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-magnifying-glass-chart"></i>
+                                        <div class="capability-info">
+                                            <h6>Detecta anomalías</h6>
+                                            <span>Análisis proactivo de inconsistencias</span>
+                                        </div>
+                                    </div>
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-database"></i>
+                                        <div class="capability-info">
+                                            <h6>Consolida información</h6>
+                                            <span>Unifica datos de toda la suite</span>
+                                        </div>
+                                    </div>
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-bell"></i>
+                                        <div class="capability-info">
+                                            <h6>Genera alertas</h6>
+                                            <span>Notificaciones en tiempo real</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Centro: Isotipo SiCopilot Oficial -->
+                                <div class="command-nucleus-center">
+                                    <i class="fa fa-circle-nodes nucleus-icon"></i>
+                                    <div class="nucleus-text">
+                                        <span class="brand">SICOPILOT</span>
+                                        <span class="sub">CENTRO DE INTELIGENCIA</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Columna Derecha: 3 Capacidades -->
+                                <div class="command-col-right">
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-lightbulb"></i>
+                                        <div class="capability-info">
+                                            <h6>Recomienda acciones</h6>
+                                            <span>Sugerencias operativas predictivas</span>
+                                        </div>
+                                    </div>
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-toggle-on"></i>
+                                        <div class="capability-info">
+                                            <h6>Automatiza controles</h6>
+                                            <span>Validación de flujos y procesos</span>
+                                        </div>
+                                    </div>
+                                    <div class="command-capability-card">
+                                        <i class="fa fa-circle-check"></i>
+                                        <div class="capability-info">
+                                            <h6>Asiste decisiones</h6>
+                                            <span>Soporte ejecutivo continuo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Frase de Cierre Destacada -->
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-4 text-primary font-secondary mb-0" style="font-weight: 600; font-style: italic; opacity: 0.95;">
+                    "La inteligencia surge cuando toda la organización trabaja conectada."
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- SiCopilot Bloque Destacado End -->
+
+
+    <!-- Diferencial Start -->
+    <div class="container-xxl py-5 bg-light text-center">
+        <div class="container py-5 wow zoomIn" data-wow-delay="0.1s">
+            <h2 class="display-5 text-white font-secondary mb-4" style="font-weight: 700 !important;">Diferencial SICORP</h2>
+            <p class="fs-4 text-primary font-secondary mb-5 mx-auto" style="max-width: 800px; font-style: italic; font-weight: 600;">
+                "La tecnología debe adaptarse a la organización. No la organización a la tecnología."
+            </p>
+            <p class="mx-auto text-muted small" style="max-width: 600px;">
+                Este es el principio absoluto de diseño que rige cada una de nuestras implementaciones, consultorías y códigos fuente escritos para transformar organizaciones inteligentes.
+            </p>
+        </div>
+    </div>
+    <!-- Diferencial End -->
+
+
+    <!-- Nuestra Ambición Start -->
+    <div class="container-xxl py-5 bg-dark" style="background: linear-gradient(to right, #0A1F2D, #132738) !important;">
+        <div class="container py-5 text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="text-primary font-secondary text-uppercase mb-3" style="letter-spacing: 3px;">Visión 2030</h6>
+            <h2 class="display-5 text-white font-secondary mb-4" style="font-weight: 800 !important; max-width: 800px; margin: 0 auto;">Nuestra Ambición</h2>
+            <h3 class="text-white font-secondary mb-3 mt-4 display-6" style="font-weight: 300; max-width: 900px; margin: 0 auto; line-height: 1.3;">
+                Construir el <span class="text-primary" style="font-weight: 700;">Sistema Operativo de las Organizaciones</span>
+            </h3>
+            <p class="fs-5 text-muted font-secondary mb-5 mx-auto" style="max-width: 800px; font-weight: 400; line-height: 1.6;">
+                Conectando personas, operaciones, información y decisiones mediante software, integración e inteligencia organizacional.
+            </p>
+            <div class="d-flex justify-content-center flex-column flex-sm-row gap-3 mt-4">
+                <a href="diagnostico.html" class="btn btn-primary py-3 px-5 rounded">Solicitar Diagnóstico SICORP</a>
+                <a href="https://wa.me/5493364027967?text=Hola%20Leandro,%20estuve%20viendo%20la%20web%20de%20SICORP%20y%20me%20gustaría%20solicitar%20un%20diagnóstico%20para%20mi%20organización." target="_blank" class="btn btn-outline-primary py-3 px-5 rounded"><i class="fab fa-whatsapp me-2"></i>WhatsApp Directo</a>
+            </div>
+        </div>
+    </div>
+    <!-- Nuestra Ambición End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">
-                        <i class="fa fa-building text-primary me-2"></i>Sicorp
-                    </h5>
-                    <p class="mb-4">Transformamos desafíos en soluciones tecnológicas innovadoras. Con más de 100 proyectos exitosos y un equipo de expertos certificados.</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" style="height: 40px; margin-right: 15px;">
+                        <h5 class="text-white m-0 font-secondary" style="font-weight: 700 !important;">SICORP</h5>
+                    </div>
+                    <p class="mb-4">Transformamos procesos, datos y decisiones mediante software e inteligencia artificial. Habilitando la evolución corporativa sostenible.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://wa.me/5493364027967" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.linkedin.com/in/leandro-moisello-2391b34a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/sicorp.srl/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-4">Navegación</h5>
+                    <h5 class="text-white mb-4 font-secondary">Navegación</h5>
                     <a class="btn btn-link" href="index.html">Inicio</a>
-                    <a class="btn btn-link" href="about.html">Nosotros</a>
-                    <a class="btn btn-link" href="project.html">Soluciones</a>
-                    <a class="btn btn-link" href="contact.html">Contacto</a>
+                    <a class="btn btn-link" href="capacidades.html">Capacidades</a>
+                    <a class="btn btn-link" href="industrias.html">Industrias</a>
+                    <a class="btn btn-link" href="suite.html">Suite SICORP</a>
+                    <a class="btn btn-link" href="casos.html">Casos de Éxito</a>
+                    <a class="btn btn-link" href="ia.html">SiCopilot</a>
+                    <a class="btn btn-link" href="nosotros.html">Nosotros</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Contacto</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Pellegrini, San Nicolás de los Arroyos</p>
+                    <h5 class="text-white mb-4 font-secondary">Contacto Directo</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>San Nicolás de los Arroyos, Argentina</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+54 9 3364027967</p>
                     <p class="mb-2"><i class="far fa-clock text-primary me-3"></i>Lunes a Viernes: 9:00 a 15:00 hs</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Nuestros Servicios</h5>
-                    <a class="btn btn-link" href="project.html">Habilitaciones Comerciales</a>
-                    <a class="btn btn-link" href="project.html">Gestión de Proveedores</a>
-                    <a class="btn btn-link" href="project.html">Control de Stock</a>
-                    <a class="btn btn-link" href="project.html">Chatbot Municipal</a>
-                    <a class="btn btn-link" href="project.html">Sistema Electoral</a>
-                    <a class="btn btn-link" href="project.html">Seguridad Informática</a>
-                    <a class="btn btn-link" href="project.html">Sistema ERP</a>
-                    <a class="btn btn-link" href="project.html">Agente IA - Documentación</a>
+                    <h5 class="text-white mb-4 font-secondary">Ecosistema</h5>
+                    <a class="btn btn-link" href="suite.html#sierp">SiERP (Operaciones)</a>
+                    <a class="btn btn-link" href="suite.html#sicheck">SiCheck (Personas)</a>
+                    <a class="btn btn-link" href="suite.html#sisync">SiSync (Conectividad)</a>
+                    <a class="btn btn-link" href="suite.html#sifleet">SiFleet (Logística)</a>
+                    <a class="btn btn-link" href="suite.html#siprov">SiProv (Compras)</a>
+                    <a class="btn btn-link" href="suite.html#sistore">SiStore (Comercio)</a>
+                    <a class="btn btn-link" href="suite.html#sihabs">SiHabs (Gobierno)</a>
+                    <a class="btn btn-link" href="suite.html#siescri">SiEscri (Legales)</a>
+                    <a class="btn btn-link" href="suite.html#siticket">SiTicket (Soporte)</a>
+                    <a class="btn btn-link" href="ia.html">SiCopilot (Centro de Inteligencia)</a>
                 </div>
             </div>
         </div>
@@ -556,10 +1107,10 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="index.html">Sicorp</a>, Todos los derechos reservados.
+                        &copy; <a class="border-bottom" href="index.html">SICORP</a>, Todos los derechos reservados.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        Diseñado por <a class="border-bottom" href="index.html">Sicorp</a>
+                        Diseñado y Construido por <a class="border-bottom" href="index.html">SICORP</a>
                     </div>
                 </div>
             </div>
@@ -585,7 +1136,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="https://chatbotsimple.com/widget.js" data-id="eabd6fb8-e640-4600-a574-a560e06a2516"></script>
 </body>
 
 </html>

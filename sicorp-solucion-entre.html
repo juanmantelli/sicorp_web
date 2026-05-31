@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="img/favicon.ico" rel="icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución Implementada: ENTRE - SICORP</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sicorp-dark': '#0A1F2D',
+                        'sicorp-secondary': '#132738',
+                        'sicorp-green': '#25D366',
+                        'sicorp-border': 'rgba(255, 255, 255, 0.08)',
+                        'sicorp-grey': '#CBD5E1',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'secondary': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A1F2D;
+            color: #F8FAFC;
+        }
+        .glass-card {
+            background: rgba(19, 39, 56, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+        .glass-card:hover {
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+        .glowing-badge {
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+
+    <!-- Header Section -->
+    <nav class="border-b border-sicorp-border py-4 bg-sicorp-dark sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" class="h-10">
+                <div class="flex flex-col text-left">
+                    <span class="text-white font-secondary font-bold text-lg tracking-wider">SICORP</span>
+                    <span class="text-sicorp-green font-secondary font-semibold text-[8px] tracking-[2px]">ORGANIZACIONES INTELIGENTES</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="casos.html" class="text-sm font-medium text-sicorp-grey hover:text-white transition"><i class="fa fa-arrow-left mr-2"></i>Volver a Casos</a>
+                <a href="diagnostico.html" class="bg-sicorp-green text-sicorp-dark text-xs font-bold px-4 py-2 rounded-full hover:bg-opacity-90 transition font-secondary">Solicitar Diagnóstico</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-20 relative overflow-hidden bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-sicorp-secondary via-sicorp-dark to-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sicorp-green/30 bg-sicorp-green/10 text-sicorp-green text-xs font-bold tracking-wider mb-6 glowing-badge">
+                <i class="fa fa-users-gear"></i> CASO REAL · GESTIÓN INTELIGENTE DE PERSONAS Y OPERACIONES
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-secondary font-extrabold mb-4 tracking-tight leading-tight text-white">
+                ENTRE
+            </h1>
+            <p class="text-lg md:text-xl text-sicorp-green font-secondary font-medium mb-8">
+                Solución Implementada: Procesamiento de Datos Multi-Origen, Legajos Blindados y Operación Conectada
+            </p>
+            <p class="text-sicorp-grey max-w-3xl mx-auto text-base md:text-lg mb-12 leading-relaxed">
+                Centralización integral del personal operativo distribuido en múltiples ciudades, clientes y operaciones. La plataforma integra automáticamente registros de control de accesos de clientes y fuentes externas mediante SiSync, consolidando legajos, novedades de RRHH, ausentismo y documentación laboral.
+            </p>
+
+            <!-- Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">Pocas Horas</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Procesamiento de Novedades</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Novedades operativas complejas procesadas al instante sin demoras manuales.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">100%</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Trazabilidad de Información</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Legajos digitales centralizados y documentación unificada en un solo lugar.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">En Vivo</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Dashboards de Control</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Visibilidad completa del presentismo y variables operacionales de campo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implemented Solutions Section -->
+    <section class="py-16 bg-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-secondary font-bold text-center mb-2">Arquitectura de la Solución</h2>
+            <p class="text-center text-sicorp-grey mb-12 max-w-2xl mx-auto">Conoce cómo se integran las plataformas de SICORP y la gestión de personas en ENTRE.</p>
+
+            <div class="space-y-16">
+                
+                <!-- 1. SiSync (EL PROTAGONISTA) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-sync-alt"></i> NÚCLEO DE INTEGRACIÓN
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiSync</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Integración Inteligente de Información Operativa</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Resuelve la unificación y recuento automático de asistencia en operaciones complejas. Procesa y mapea datos procedentes de relojes biométricos y sistemas de acceso de clientes, aplicando reglas por convenio, sector, puesto y sucursal de manera autónoma.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Integración de fuentes externas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Procesamiento automático</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Reglas específicas por convenio</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Reglas específicas por sector</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Reglas por puesto y sucursal</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Consolidación de información</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Datos listos para liquidación</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: SiSync clocks ingestion -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left w-full">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-shuffle text-sicorp-green mr-1.5"></i> Integrador Automatizado SiSync</span>
+                                <span class="text-[9px] bg-sicorp-green/20 text-sicorp-green px-2 py-0.5 rounded font-bold">PROCESADO ONLINE</span>
+                            </div>
+
+                            <div class="space-y-3 text-xs">
+                                <div class="bg-sicorp-dark/80 p-2.5 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-[11px] font-bold text-white"><i class="fa fa-clock text-sicorp-green mr-1.5"></i> Registros Reloj Planta San Nicolás</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Registros: 812 · Asignado a: Convenio Camioneros</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">Mapeado ✅</span>
+                                </div>
+                                <div class="bg-sicorp-dark/80 p-2.5 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-[11px] font-bold text-white"><i class="fa fa-clock text-sicorp-green mr-1.5"></i> Registros Reloj Planta Ramallo</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Registros: 642 · Asignado a: Convenio Metalúrgicos</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">Mapeado ✅</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Legajo Digital -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: Legajo Digital employee card -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left max-w-md mx-auto">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-user-circle text-sicorp-green mr-1.5"></i> Legajo Digital #OP-772</span>
+                                <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">VALIDADO UOM</span>
+                            </div>
+
+                            <div class="flex items-start gap-3 mb-3">
+                                <div class="w-12 h-12 bg-sicorp-dark/80 border border-sicorp-border rounded-full flex items-center justify-center text-sicorp-grey">
+                                    <i class="fa fa-user text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Carlos Daniel Ortega</h4>
+                                    <p class="text-[9px] text-sicorp-grey">Chofer de Primera · Convenio Camioneros</p>
+                                    <p class="text-[8px] text-sicorp-grey">Asignación: Sucursal San Nicolás (Operaciones en Planta)</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-sicorp-dark/50 p-2.5 rounded border border-sicorp-border text-[9px] space-y-1.5">
+                                <div class="flex justify-between"><span>Apto Físico Laboral:</span> <span class="text-sicorp-green font-bold">Vigente ✅</span></div>
+                                <div class="flex justify-between"><span>Alta de Empleo AFIP / Seguro:</span> <span class="text-sicorp-green font-bold">Presentado ✅</span></div>
+                                <div class="flex justify-between"><span>Licencia de Conducir Profesional:</span> <span class="text-sicorp-green font-bold">Clase E1 (Vigente)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-id-card"></i> LEGAJO CENTRALIZADO
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">Legajo Digital</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Gestión Documental Blindada e Inteligente</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Centraliza la ficha de empleados y la documentación obligatoria requerida por clientes e inspectores en una única plataforma blindada, controlando vigencias y previniendo penalidades.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Documentación obligatoria</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Legajo digital unificado</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Historial del empleado</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Grupo familiar completo</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Contrataciones y categorías</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Información laboral centralizada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Gestión de Personas -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-users"></i> RRHH & ADMINISTRACIÓN
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">Gestión de Personas</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Administración Integral de Incidencias Laborales</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Automatiza la carga, validación e impacto de incidencias. Centraliza licencias por enfermedad o accidentes, vacaciones programadas, adelantos de quincena, sanciones y novedades en vivo.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control de vacaciones</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Licencias médicas y accidentes</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Registro de ausentismo</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Sanciones y disciplinarios</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Descuentos, adelantos y cuotas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Novedades operativas en vivo</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: RRHH Administration Dashboard -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left max-w-sm mx-auto">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-tasks text-sicorp-green mr-1.5"></i> Novedades RRHH</span>
+                                <span class="text-[9px] text-sicorp-grey">Operaciones Activas</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs">
+                                <div class="p-2 bg-sicorp-dark/60 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-[10px] font-bold text-white">Vacaciones Programadas</h5>
+                                        <p class="text-[8px] text-sicorp-grey">Chofer: Carlos Ortega · 14 días aprobados.</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">Aprobado ✅</span>
+                                </div>
+                                <div class="p-2 bg-sicorp-dark/60 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-[10px] font-bold text-white">Certificado Médico Validado</h5>
+                                        <p class="text-[8px] text-sicorp-grey">Técnico: Roberto Alessandri · Licencia activa.</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">Validado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Dashboards Inteligentes -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: Dashboards Inteligentes CSS -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left w-full">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-chart-line text-sicorp-green mr-1.5"></i> Indicadores de Personal y Horas</span>
+                                <span class="text-[8px] bg-sicorp-green/20 text-sicorp-green px-2 py-0.5 rounded font-bold">TIEMPO REAL</span>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-3 text-center mb-4">
+                                <div class="bg-sicorp-dark/50 p-2 rounded border border-sicorp-border">
+                                    <span class="text-[8px] text-sicorp-grey block uppercase">Ausentismo</span>
+                                    <span class="text-base font-extrabold text-white">1.3%</span>
+                                </div>
+                                <div class="bg-sicorp-dark/50 p-2 rounded border border-sicorp-border">
+                                    <span class="text-[8px] text-sicorp-grey block uppercase">Total Dotación</span>
+                                    <span class="text-base font-extrabold text-white">1.250</span>
+                                </div>
+                                <div class="bg-sicorp-dark/50 p-2 rounded border border-sicorp-border">
+                                    <span class="text-[8px] text-sicorp-grey block uppercase">Horas Trabajadas</span>
+                                    <span class="text-base font-extrabold text-white">42.5K</span>
+                                </div>
+                            </div>
+
+                            <!-- Bar Chart Mockup in CSS -->
+                            <div class="space-y-2 text-[10px]">
+                                <span class="text-sicorp-grey font-medium block">Distribución de Personal por Sucursal:</span>
+                                <div>
+                                    <div class="flex justify-between text-[8px] text-sicorp-grey mb-1">
+                                        <span>San Nicolás (Servicios)</span>
+                                        <span>750 Colaboradores (60%)</span>
+                                    </div>
+                                    <div class="w-full bg-sicorp-dark/80 rounded-full h-2 border border-sicorp-border">
+                                        <div class="bg-sicorp-green h-1.5 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-[8px] text-sicorp-grey mb-1">
+                                        <span>Ramallo & Otras Sedes</span>
+                                        <span>500 Colaboradores (40%)</span>
+                                    </div>
+                                    <div class="w-full bg-sicorp-dark/80 rounded-full h-2 border border-sicorp-border">
+                                        <div class="bg-sicorp-green h-1.5 rounded-full" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-chart-pie"></i> ANALÍTICA OPERATIVA
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">Dashboards Inteligentes</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Información y Decisiones en Tiempo Real</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Proporciona analíticas en tiempo real sobre el estado de la dotación distribuida. Permite ver el presentismo de áreas y sucursales, controlar horas trabajadas y ausentismos por convenio.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Dashboard principal de RRHH</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Dashboard de Operaciones</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Distribución por convenio y sector</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Distribución por sucursal activa</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control de horas trabajadas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Monitor de ausentismo y consumos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. SiCopilot (Próxima Evolución) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-primary px-3 py-1 rounded bg-primary/10 border border-primary/20">
+                            <i class="fa fa-circle-nodes"></i> CENTRO DE INTELIGENCIA
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiCopilot</h3>
+                        <p class="text-sm text-primary font-medium">Auditoría Predictiva de Asistencia y Convenios</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Iniciativas en desarrollo para la incorporación de capacidades del Centro de Inteligencia. SiCopilot auditará automáticamente las marcaciones consolidadas por SiSync, detectará anomalías horarias y sugerirá reemplazos según licencias y aptitudes médicas del legajo.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-primary mr-2"></i>Detección de anomalías horarias</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i>Errores de fichadas evitados</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i>Alertas de vencimiento documentales</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i>Validaciones de convenio automáticas</li>
+                            <li><i class="fa fa-check text-primary mr-2"></i>Asistencia para cobertura de turnos</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: SiCopilot Future Vision -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-primary overflow-hidden text-left" style="border-color: var(--primary) !important;">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-network-wired text-sicorp-green mr-1.5"></i> SiCopilot Roadmap - Inteligencia</span>
+                                <span class="text-[8px] bg-primary/20 text-primary border border-primary/30 px-2 py-0.5 rounded font-bold">PLAN DE EVOLUCIÓN</span>
+                            </div>
+
+                            <div class="bg-sicorp-dark/80 p-3 rounded border border-primary/30 text-xs space-y-2">
+                                <div class="flex items-center gap-2 text-primary font-bold">
+                                    <i class="fa fa-circle-nodes text-sm"></i>
+                                    <span>Control Inteligente de Horas Extra</span>
+                                </div>
+                                <p class="text-[10px] text-sicorp-grey">
+                                    "SiCopilot auditará la carga horaria consolidada, detectando desvíos imprevistos sobre el límite legal del convenio y sugiriendo una redistribución de turnos antes del cierre de quincena."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence & Benefits Section -->
+    <section class="py-16 bg-sicorp-secondary/40 border-t border-b border-sicorp-border">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-secondary font-bold text-center mb-8">Evidencia de Valor y Beneficios Obtenidos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <h4 class="text-lg font-secondary font-bold text-white flex items-center gap-2"><i class="fa fa-circle-check text-sicorp-green"></i> Unificación y Gestión Blindada</h4>
+                    <p class="text-sm text-sicorp-grey leading-relaxed">
+                        Control total e integrado del legajo digital y los requisitos documentales exigidos por clientes e inspectores. Eliminación completa de planillas paralelas y carpetas físicas, garantizando un cumplimiento de normas transparente en múltiples ciudades de la operación.
+                    </p>
+                </div>
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <h4 class="text-lg font-secondary font-bold text-white flex items-center gap-2"><i class="fa fa-circle-check text-sicorp-green"></i> Reducción de Costes Administrativos</h4>
+                    <p class="text-sm text-sicorp-grey leading-relaxed">
+                        Procesamiento y mapeo 100% automático de novedades de asistencia quincenales. Se erradican desvíos, recuentos manuales y errores humanos de liquidación, reduciendo los tiempos de cierre de novedades a pocas horas de trabajo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="py-16 text-center bg-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-2xl font-secondary font-bold text-white mb-4">¿Quieres construir una organización inteligente?</h3>
+            <p class="text-sicorp-grey mb-8">Descubre cómo SICORP puede digitalizar, integrar y transformar las operaciones de tu industria o gobierno.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="diagnostico.html" class="bg-sicorp-green text-sicorp-dark font-secondary font-bold px-8 py-3 rounded-full hover:bg-opacity-90 transition font-secondary">Solicitar Diagnóstico Especializado</a>
+                <a href="casos.html" class="border border-sicorp-border text-white font-secondary font-medium px-8 py-3 rounded-full hover:bg-sicorp-secondary transition font-secondary">Ver otros Casos de Éxito</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

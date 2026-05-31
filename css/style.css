@@ -1,8 +1,35 @@
-/********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/********** Template CSS - SICORP 2030 Enterprise Dark Mode **********/
 :root {
-    --primary: #215468;
-    --light: #3F9FC4;
-    --dark: #1A2A36;
+    --primary: #25D366; /* Verde SICORP */
+    --primary-dark: #1eb855;
+    --bg-primary: #0A1F2D; /* Fondo principal */
+    --bg-secondary: #132738; /* Fondo secundario */
+    --white: #F8FAFC;
+    --grey: #CBD5E1;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(19, 39, 56, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: blur(12px);
+    
+    /* Variables Bootstrap overrides */
+    --bs-body-bg: var(--bg-primary);
+    --bs-body-color: var(--grey);
+}
+
+body {
+    background-color: var(--bg-primary) !important;
+    color: var(--grey) !important;
+    font-family: var(--font-primary) !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--white) !important;
+    font-family: var(--font-secondary) !important;
+    font-weight: 600 !important;
 }
 
 .fw-medium {
@@ -800,4 +827,771 @@
     margin: 0;
     font-size: 14px;
     font-weight: 500;
+}
+
+/* ==========================================================================
+   SICORP 2030 ENTERPRISE THEME OVERRIDES
+   ========================================================================== */
+
+/* Overrides para Bootstrap oscurecido */
+.bg-light, .container-fluid.bg-light, .container-xxl.bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-white, .container-fluid.bg-white, .container-xxl.bg-white {
+    background-color: var(--bg-secondary) !important;
+}
+
+.text-dark {
+    color: var(--white) !important;
+}
+
+.text-body, .text-muted, p, span {
+    color: var(--grey) !important;
+}
+
+/* Rediseño de Botones */
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #0A1F2D !important;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 4px;
+    background: transparent !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary) !important;
+    color: #0A1F2D !important;
+    transform: translateY(-2px);
+}
+
+/* Navbar Oscuro */
+.navbar {
+    background: rgba(10, 31, 45, 0.95) !important;
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .navbar-brand h2 {
+    color: var(--white) !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--grey) !important;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Tarjetas y Contenedores Premium (Glassmorphism) */
+.service-item, .client-image-wrapper, .team-item, .testimonial-text, .card, .infographic-card {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.service-item:hover, .client-image-wrapper:hover, .team-item:hover, .card:hover, .infographic-card:hover {
+    border-color: rgba(37, 211, 102, 0.3) !important;
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.15) !important;
+}
+
+.service-icon {
+    background: var(--bg-primary) !important;
+    color: var(--primary) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.service-item:hover .service-icon {
+    background: var(--primary) !important;
+    color: #0A1F2D !important;
+}
+
+/* Ecosistema SICORP Visual Grid */
+.ecosystem-container {
+    position: relative !important;
+    padding: 50px 0 !important;
+    background: rgba(19, 39, 56, 0.25);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    margin: 45px 0;
+    overflow: hidden;
+}
+
+/* Red de Conexión del Ecosistema */
+.ecosystem-svg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ecosystem-flow-line {
+    stroke: rgba(37, 211, 102, 0.08); /* Extremadamente sutil para no competir con el contenido */
+    stroke-width: 1.5px;
+    stroke-dasharray: 4, 8;
+    fill: none;
+    transition: stroke 0.3s ease;
+}
+
+.ecosystem-flow-line.intelligence-line {
+    stroke: rgba(37, 211, 102, 0.16); /* Capa de inteligencia ligeramente más visible */
+    stroke-width: 2px;
+    stroke-dasharray: 6, 6;
+    fill: none;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px; /* Generoso espacio vertical para apreciar el flujo de las conexiones */
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.ecosystem-placeholder {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.ecosystem-node {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--glass-border) !important;
+    padding: 24px 20px !important;
+    border-radius: 14px !important;
+    text-align: center !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 100% !important;
+}
+
+.ecosystem-node h5 {
+    color: var(--white) !important;
+    margin: 0 0 6px 0 !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    font-family: var(--font-secondary) !important;
+    transition: color 0.3s ease !important;
+}
+
+.ecosystem-node span {
+    font-size: 0.82rem !important;
+    color: var(--grey) !important;
+    font-weight: 400 !important;
+}
+
+.ecosystem-node:hover {
+    border-color: rgba(37, 211, 102, 0.5) !important;
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.12) !important;
+    transform: translateY(-5px) !important;
+    background: rgba(19, 39, 56, 0.95) !important;
+}
+
+.ecosystem-node:hover h5 {
+    color: var(--primary) !important;
+}
+
+/* Copilot: Capa de Inteligencia Superior */
+.ecosystem-node.copilot {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin: 0 auto 15px auto;
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.18) 0%, rgba(10, 31, 45, 0.98) 100%) !important;
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.25) !important;
+    padding: 28px 30px !important;
+    border-radius: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.copilot-badge {
+    background: rgba(37, 211, 102, 0.12) !important;
+    border: 1px solid rgba(37, 211, 102, 0.35) !important;
+    color: var(--primary) !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 4px 12px !important;
+    border-radius: 50px !important;
+    margin-bottom: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.copilot-subtitle {
+    color: var(--white) !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    margin: 4px 0 8px 0 !important;
+    text-transform: uppercase !important;
+    opacity: 0.95 !important;
+}
+
+.copilot-description {
+    color: var(--grey) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    opacity: 0.85 !important;
+}
+
+.ecosystem-node.copilot:hover {
+    box-shadow: 0 0 45px rgba(37, 211, 102, 0.4) !important;
+    transform: translateY(-5px) !important;
+}
+
+/* Núcleo Central: Hub Corporativo (Sin apariencia de tarjeta/módulo) */
+.ecosystem-hub-nucleus {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    z-index: 5 !important;
+    pointer-events: none !important; /* No interactivo, puro ecosistema */
+    padding: 10px !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.ecosystem-hub-nucleus img {
+    height: 48px !important;
+    width: auto !important;
+    margin-bottom: 12px !important;
+    filter: drop-shadow(0 0 12px rgba(37, 211, 102, 0.45)) !important;
+    animation: pulse-logo-glow 3.5s infinite alternate ease-in-out !important;
+}
+
+.ecosystem-hub-nucleus h5 {
+    color: var(--white) !important;
+    font-weight: 800 !important;
+    font-size: 1.35rem !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 4px 0 !important;
+    text-transform: uppercase !important;
+    font-family: var(--font-secondary) !important;
+}
+
+.ecosystem-hub-nucleus span {
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    color: var(--primary) !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+}
+
+@keyframes pulse-logo-glow {
+    0% {
+        filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.35));
+        transform: scale(1.0);
+    }
+    100% {
+        filter: drop-shadow(0 0 22px rgba(37, 211, 102, 0.75));
+        transform: scale(1.06);
+    }
+}
+
+/* Frase de Cierre Premium */
+.ecosystem-footer-phrase {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: var(--white) !important;
+    letter-spacing: 0.5px !important;
+    background: linear-gradient(90deg, #FFFFFF 20%, var(--primary) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    border-bottom: 1.5px solid rgba(37, 211, 102, 0.25) !important;
+}
+
+/* Responsividad para la Red del Ecosistema */
+@media (max-width: 768px) {
+    .ecosystem-container {
+        padding: 30px 15px !important;
+    }
+    .ecosystem-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    .ecosystem-svg-lines {
+        display: none !important; /* Ocultar líneas en mobile para priorizar claridad */
+    }
+    .ecosystem-hub-nucleus {
+        transform: none !important;
+        padding: 20px 10px !important;
+    }
+}
+
+/* Sección Trayectoria e Impacto */
+.impact-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(19, 39, 56, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.impact-item:hover {
+    border-color: var(--primary);
+    transform: scale(1.03);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.impact-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.4;
+}
+
+/* Sección Lo que NO hacemos */
+.no-item {
+    background: rgba(220, 53, 69, 0.03);
+    border: 1px solid rgba(220, 53, 69, 0.15) !important;
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.no-item:hover {
+    border-color: rgba(220, 53, 69, 0.3) !important;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.05);
+}
+
+.no-icon {
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Footer Premium */
+.footer {
+    background: #06151f !important;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer .btn-link {
+    color: var(--grey) !important;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-link:hover {
+    color: var(--primary) !important;
+    padding-left: 8px !important;
+}
+
+.footer h5::after {
+    background: var(--primary) !important;
+}
+
+/* Spinner override */
+#spinner {
+    background-color: var(--bg-primary) !important;
+}
+
+#spinner .spinner-border {
+    color: var(--primary) !important;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-secondary);
+    border: 2px solid var(--bg-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Sección de Respaldo y Confianza (Light Neutral) */
+.clientes-trust-section {
+    background-color: #F8FAFC !important; /* Fondo neutro claro */
+    border-top: 1px solid #E2E8F0 !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.clientes-trust-section h1, 
+.clientes-trust-section h2, 
+.clientes-trust-section h3, 
+.clientes-trust-section h4, 
+.clientes-trust-section h5, 
+.clientes-trust-section h6,
+.clientes-trust-section p {
+    color: #0A1F2D !important; /* Forzar texto oscuro en esta sección clara */
+}
+
+.clientes-trust-section h6.text-primary {
+    color: var(--primary-dark) !important; /* Verde con contraste suficiente en fondo claro */
+}
+
+.clientes-trust-section .text-muted-dark {
+    color: #475569 !important; /* Gris oscuro para el texto secundario/respaldo */
+}
+
+/* Tarjetas de Logotipos Premium */
+.logo-card {
+    background: #FFFFFF !important; /* Tarjeta blanca para logos con fondo */
+    border: 1px solid #E2E8F0 !important; /* Borde sutil y limpio */
+    border-radius: 12px !important; /* Bordes redondeados premium */
+    padding: 15px 20px !important;
+    height: 100px !important; /* Altura uniforme perfecta */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.logo-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 20px 25px -5px rgba(10, 31, 45, 0.1), 0 10px 10px -5px rgba(10, 31, 45, 0.04) !important;
+    border-color: var(--primary) !important; /* Resalta en verde SICORP en hover */
+}
+
+.logo-img {
+    max-height: 48px;
+    max-width: 85%;
+    object-fit: contain !important;
+    filter: grayscale(1) opacity(0.65) !important; /* Grayscale elegante de inicio */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.logo-card:hover .logo-img {
+    filter: grayscale(0) opacity(1) !important; /* Recupera su color original brillante */
+    transform: scale(1.05) !important;
+}
+
+/* ==========================================================================
+   RED DE INTELIGENCIA DE PROCESOS Y DATOS (SiCopilot)
+   ========================================================================== */
+.copilot-network-viz {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-width: 320px;
+    margin: 0 auto 30px auto;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.08) 0%, transparent 75%);
+}
+
+.network-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.flow-line {
+    stroke: rgba(37, 211, 102, 0.3);
+    stroke-width: 2.5;
+    stroke-dasharray: 6, 8;
+    animation: copilot-data-flow 6s linear infinite;
+}
+
+@keyframes copilot-data-flow {
+    to {
+        stroke-dashoffset: -56;
+    }
+}
+
+.viz-node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.viz-node.central-node {
+    width: 75px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #132738 0%, #0A1F2D 100%) !important;
+    border: 2px solid var(--primary) !important;
+    z-index: 5;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.25) !important;
+    animation: pulse-nucleus 3s infinite alternate ease-in-out !important;
+}
+
+.viz-node.central-node img {
+    height: 26px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(37, 211, 102, 0.4));
+    transition: all 0.3s ease;
+}
+
+.viz-node.outer-node {
+    width: 50px;
+    height: 50px;
+    background: #132738 !important;
+    border: 1px solid var(--glass-border) !important;
+    z-index: 3;
+}
+
+.viz-node.outer-node i {
+    font-size: 1.1rem;
+    color: var(--primary) !important;
+    transition: all 0.3s ease;
+}
+
+/* Bucle de flotamiento para nodos externos */
+@keyframes float-node {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    100% { transform: translate(-50%, -50%) translateY(-6px); }
+}
+
+.viz-node.outer-node.node-1 { top: 13%; left: 50%; animation: float-node 3.0s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-2 { top: 28%; left: 83%; animation: float-node 3.2s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-3 { top: 58%; left: 86%; animation: float-node 3.4s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-4 { top: 83%; left: 70%; animation: float-node 3.6s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-5 { top: 83%; left: 30%; animation: float-node 3.8s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-6 { top: 58%; left: 14%; animation: float-node 4.0s infinite alternate ease-in-out; }
+.viz-node.outer-node.node-7 { top: 28%; left: 17%; animation: float-node 4.2s infinite alternate ease-in-out; }
+
+.node-title-label {
+    position: absolute;
+    bottom: -22px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--grey) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.viz-node.outer-node:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.35) !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    z-index: 10;
+}
+
+.viz-node.outer-node:hover i {
+    color: var(--white) !important;
+    transform: scale(1.1);
+}
+
+.viz-node.outer-node:hover .node-title-label {
+    color: var(--white) !important;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   CENTRO DE COMANDO Y CONTROL SICOPILOT (HOME REDESIGN)
+   ========================================================================== */
+.copilot-command-center {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.command-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.command-col-left, .command-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.command-capability-card {
+    background: rgba(19, 39, 56, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-left: 3px solid var(--primary) !important;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.command-capability-card i {
+    font-size: 1.1rem;
+    color: var(--primary) !important;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.command-capability-card .capability-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.command-capability-card h6 {
+    color: var(--white) !important;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    font-size: 0.88rem;
+    letter-spacing: 0.3px;
+}
+
+.command-capability-card span {
+    color: #8c9fae !important;
+    font-size: 0.65rem;
+    display: block;
+    line-height: 1.25;
+}
+
+.command-capability-card:hover {
+    border-color: rgba(37, 211, 102, 0.3) !important;
+    border-left-color: var(--primary) !important;
+    background: rgba(19, 39, 56, 0.85) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.2);
+}
+
+.command-nucleus-center {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, #132738 0%, #0A1F2D 100%) !important;
+    border: 2px solid var(--primary) !important;
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.3) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 2;
+    animation: pulse-nucleus-center 4s infinite alternate ease-in-out;
+}
+
+.command-nucleus-center i.nucleus-icon {
+    font-size: 2.2rem;
+    color: var(--primary) !important;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.6));
+}
+
+.nucleus-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nucleus-text .brand {
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: var(--font-secondary);
+}
+
+.nucleus-text .sub {
+    color: var(--primary);
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+@keyframes pulse-nucleus-center {
+    0% {
+        transform: scale(0.97);
+        box-shadow: 0 0 25px rgba(37, 211, 102, 0.2);
+    }
+    100% {
+        transform: scale(1.03);
+        box-shadow: 0 0 45px rgba(37, 211, 102, 0.45);
+    }
+}
+
+@media (max-width: 991px) {
+    .command-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .command-nucleus-center {
+        order: -1;
+        margin-bottom: 10px;
+        width: 150px;
+        height: 150px;
+    }
 }

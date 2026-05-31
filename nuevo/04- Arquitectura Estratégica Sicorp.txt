@@ -1,0 +1,98 @@
+
+--- PAGE 1 ---
+ARQUITECTURA ESTRATÉGICA SICORP
+ORGANIZACIONES INTELIGENTES
+Transformamos procesos, datos y decisiones mediante software e inteligencia artificial.
+VISIÓN DEL ECOSISTEMA
+SICORP diseña plataformas inteligentes que permiten a las organizaciones capturar información,
+procesar datos, gestionar operaciones y tomar mejores decisiones.
+Cada solución puede funcionar de manera independiente.
+Pero su máximo valor se alcanza cuando forma parte del ecosistema completo.
+LAS CUATRO CAPACIDADES FUNDAMENTALES
+Toda organización inteligente necesita desarrollar cuatro capacidades esenciales.
+CAPTURAR
+Registrar la realidad.
+Sin información confiable no existen decisiones confiables.
+Plataforma principal
+SiCheck
+PROCESAR
+Transformar datos en información útil.
+Plataforma principal
+SiSync
+GESTIONAR
+Operar la organización.
+1
+--- PAGE 2 ---
+Centralizar procesos, recursos y operaciones.
+Plataforma principal
+SiERP
+DECIDIR
+Transformar información en acción.
+Plataforma principal
+SiCopilot
+EL NÚCLEO SICORP
+Estas cuatro plataformas constituyen el núcleo estratégico de SICORP .
+SiCheck
+↓
+SiSync
+↓
+SiERP
+↓
+SiCopilot
+PLATAFORMAS ESPECIALIZADAS
+Sobre este núcleo se construyen capacidades específicas para diferentes áreas de la organización.
+SiFleet
+Logística y Gestión de Flotas.
+2
+--- PAGE 3 ---
+SiProv
+Compras y Proveedores.
+SiStore
+Comercio y Operaciones Comerciales.
+SiHabs
+Gobierno Digital y Habilitaciones.
+SiTicket
+Gestión de Incidentes y Solicitudes.
+SiEscri
+Gestión Digital de Escribanos y Certificaciones.
+LOS CINCO PILARES DEL ECOSISTEMA
+Toda solución desarrollada por SICORP debe fortalecer al menos uno de estos principios.
+Inteligencia.
+Integración.
+Adaptabilidad.
+Evolución Continua.
+Resultados Reales.
+EL PRINCIPIO DE ADAPTABILIDAD
+La tecnología debe adaptarse a la organización.
+No la organización a la tecnología.
+3
+--- PAGE 4 ---
+Este principio guía el diseño, implementación y evolución de todas las plataformas SICORP .
+CONSULTORÍA + PLATAFORMA + IA
+Nuestro modelo combina tres capacidades.
+Consultoría de Transformación Operativa.
+Plataformas Inteligentes.
+Inteligencia Artificial Aplicada.
+La combinación de estas capacidades nos permite acompañar a nuestros clientes desde el diagnóstico
+hasta la ejecución.
+ARQUITECTURA DE CRECIMIENTO
+CAPTURAR
+↓
+PROCESAR
+↓
+GESTIONAR
+↓
+DECIDIR
+↓
+AUTOMATIZAR
+↓
+ESCALAR
+AMBICIÓN
+Construir el Sistema Operativo de las Organizaciones.
+4
+--- PAGE 5 ---
+Un ecosistema capaz de conectar personas, procesos, operaciones y decisiones en una única
+plataforma inteligente.
+SICORP
+Organizaciones Inteligentes.
+5

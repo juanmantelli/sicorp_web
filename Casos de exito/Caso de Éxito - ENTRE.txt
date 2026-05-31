@@ -1,0 +1,63 @@
+
+--- PAGE 1 ---
+CASO DE ÉXITO
+ENTRE
+Gestión Inteligente de Personal Operativo
+El desafío
+ENTRE administra personal operativo distribuido en múltiples clientes industriales, plantas y ciudades.
+La información provenía de diferentes sistemas de control de acceso y debía procesarse manualmente
+para validar asistencia, novedades y liquidaciones.
+Esto generaba tiempos elevados de procesamiento, riesgo de errores y baja visibilidad operativa.
+La solución
+SICORP implementó una solución integrada basada en SiSync, SiCheck y SiCopilot para centralizar
+información de personas, operaciones y reglas de negocio en una única plataforma.
+La solución permite:
+Integrar información proveniente de múltiples sistemas.
+Gestionar legajos digitales y documentación.
+Administrar novedades, ausencias y sanciones.
+Automatizar reglas operativas y administrativas.
+Obtener indicadores en tiempo real para RRHH y Operaciones.
+Incorporar inteligencia artificial para detección de anomalías.
+La transformación
+La organización pasó de procesar información manualmente durante días o semanas a disponer de
+información consolidada en cuestión de horas.
+Esto permitió:
+Reducir tiempos de liquidación.
+Disminuir errores administrativos.
+Mejorar el control operativo.
+Centralizar la gestión de personas.
+Incrementar la trazabilidad de la información.
+Obtener indicadores en tiempo real para la toma de decisiones.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+1
+--- PAGE 2 ---
+Capacidades Desarrolladas
+Personas Inteligentes
+Operaciones Inteligentes
+Conectividad Inteligente
+IA Aplicada
+Plataformas SICORP
+SiSync
+SiCheck
+SiCopilot
+Resultado
+ENTRE incorporó una nueva capacidad organizacional para gestionar personas, operaciones y costos de
+forma integrada, trazable e inteligente.
+La tecnología dejó de ser una limitación operativa para convertirse en una herramienta de gestión y
+toma de decisiones.
+• 
+• 
+• 
+• 
+2

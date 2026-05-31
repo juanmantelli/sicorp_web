@@ -1,0 +1,80 @@
+
+--- PAGE 1 ---
+CASO DE ÉXITO SICORP
+Grupo Alpina
+Distribución Inteligente y Operaciones Conectadas
+Transformando ventas, logística, distribución y administración mediante
+información integrada en tiempo real.
+Organización
+Grupo Alpina
+Empresa distribuidora con fuerza de ventas en calle, operaciones logísticas, depósito, administración y
+distribución propia.
+El desafío
+La organización operaba con información distribuida entre distintos procesos y sectores.
+Los vendedores no contaban con visibilidad completa del stock disponible.
+El depósito debía gestionar múltiples pedidos sin información centralizada.
+La distribución dependía de procesos manuales para realizar entregas, cobranzas y devoluciones.
+La administración recibía información con demoras, dificultando el control operativo y financiero.
+El desafío no era únicamente informatizar sectores.
+Era conectar toda la operación comercial y logística en una única fuente de información.
+La solución
+SICORP implementó una plataforma integrada que conecta ventas, depósito, distribución,
+administración y finanzas en tiempo real.
+La solución permite que cada sector opere sobre información actualizada, eliminando tareas duplicadas
+y mejorando la coordinación entre equipos.
+1
+--- PAGE 2 ---
+La transformación
+La implementación permitió:
+Unificar información operativa y comercial.
+Brindar stock actualizado a vendedores en calle.
+Mejorar la preparación y despacho de pedidos.
+Optimizar la gestión de distribución.
+Digitalizar entregas y cobranzas.
+Mejorar el control de devoluciones.
+Integrar procesos administrativos y financieros.
+Obtener información en tiempo real para la toma de decisiones.
+Capacidades Organizacionales Desarrolladas
+Comercio Inteligente
+Gestión integrada de ventas, precios y clientes.
+Logística Inteligente
+Control de distribución, entregas y devoluciones.
+Operaciones Inteligentes
+Información centralizada para toda la organización.
+Finanzas Integradas
+Visibilidad de cobranzas, pagos y tesorería.
+Plataformas SICORP Utilizadas
+SiERP
+Gestión integral de operaciones comerciales y administrativas.
+SiStore
+Gestión comercial y fuerza de ventas.
+SiFleet
+Gestión de distribución y entregas.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+2
+--- PAGE 3 ---
+Resultado
+Los vendedores cuentan con información actualizada de stock, precios y cuentas corrientes.
+El depósito opera sobre pedidos sincronizados y puede gestionar múltiples bocas de carga con mayor
+eficiencia.
+Los repartidores registran entregas, cobranzas y devoluciones en tiempo real desde dispositivos
+móviles.
+La administración dispone de información actualizada sobre ventas, cobranzas, cuentas corrientes,
+tesorería y operaciones.
+La dirección accede a dashboards gerenciales con indicadores en tiempo real para acompañar la toma
+de decisiones.
+Evolución Continua
+Grupo Alpina continúa evolucionando junto a SICORP incorporando nuevas capacidades de análisis,
+automatización e inteligencia aplicada para fortalecer aún más la eficiencia operativa y la visibilidad de
+la información.
+Principio SICORP Aplicado
+"La tecnología debe adaptarse a la organización.
+No la organización a la tecnología."
+3

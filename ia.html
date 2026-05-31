@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>SiCopilot - Centro de Inteligencia - SICORP</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="SiCopilot, Inteligencia Artificial, Centro de Inteligencia, Agentes IA, Automatizacion, Prediccion, Asistentes" name="keywords">
+    <meta content="SiCopilot es el Centro de Inteligencia de la Suite SICORP, diseñado para transformar datos operativos en decisiones inteligentes." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top p-0 px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center me-auto">
+            <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" style="height: 40px; margin-right: 15px;">
+            <div class="d-flex flex-column text-start">
+                <h4 class="m-0 text-white font-secondary" style="letter-spacing: 1px; font-weight: 700 !important; font-size: 20px;">SICORP</h4>
+                <small class="text-primary font-secondary" style="font-size: 9px; font-weight: 600; letter-spacing: 2px;">ORGANIZACIONES INTELIGENTES</small>
+            </div>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="capacidades.html" class="nav-item nav-link">Capacidades</a>
+                <a href="industrias.html" class="nav-item nav-link">Industrias</a>
+                <a href="suite.html" class="nav-item nav-link">Suite SICORP</a>
+                <a href="casos.html" class="nav-item nav-link">Casos de Éxito</a>
+                <a href="ia.html" class="nav-item nav-link active">SiCopilot</a>
+                <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+            </div>
+            <a href="diagnostico.html" class="btn btn-primary ms-lg-4 rounded-pill px-4 py-2" style="font-size: 14px;">Solicitar Diagnóstico</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="background: linear-gradient(135deg, #0A1F2D 0%, #132738 100%); border-bottom: 1px solid var(--border-color);">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white font-secondary mb-3 animated slideInDown" style="font-weight: 800 !important;">SiCopilot</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-primary" href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">SiCopilot</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Vision IA Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div style="border-left: 4px solid var(--primary); padding-left: 25px;">
+                        <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Centro de Inteligencia</h6>
+                        <h2 class="mb-4 display-6" style="font-weight: 700 !important;">El Centro de Inteligencia de la organización.</h2>
+                    </div>
+                    <p class="mb-4" style="font-size: 1.15rem; line-height: 1.8;">
+                        SiCopilot conecta la información de toda la organización para detectar oportunidades, generar alertas y asistir la toma de decisiones.
+                    </p>
+                    <p class="mb-4">
+                        Al integrarse con cada capacidad de la Suite SICORP, transforma datos operativos en información accionable para mejorar resultados.
+                    </p>
+                    <p class="mb-0 font-secondary text-primary font-bold" style="letter-spacing: 2px;">
+                        CONECTA · INTERPRETA · RECOMIENDA · DECIDE
+                    </p>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                     <div class="p-4 p-md-5 rounded animate__animated animate__fadeIn" style="background: linear-gradient(135deg, rgba(37,211,102,0.06) 0%, rgba(19, 39, 56, 0.9) 100%) !important; border: 1px solid var(--primary); box-shadow: 0 0 35px rgba(37, 211, 102, 0.15) !important;">
+                        <div class="text-center">
+                            <i class="fa fa-network-wired text-primary display-6 mb-3" style="filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.5));"></i>
+                            <h4 class="text-white mb-2">Centro de Inteligencia</h4>
+                            <p class="small text-muted mb-3 mx-auto" style="max-width: 400px; line-height: 1.4;">
+                                Conecta personas, operaciones, logística, comercio y gobierno digital para transformar información en decisiones.
+                            </p>
+                            <p class="small text-primary mb-4 font-bold" style="font-size: 0.8rem; letter-spacing: 0.5px;">
+                                La inteligencia que conecta todo el ecosistema SICORP.
+                            </p>
+                            
+                            <h6 class="text-uppercase text-muted small mb-3" style="letter-spacing: 2px; font-weight: 700; font-size: 0.72rem;">IMPLEMENTACIONES REALES</h6>
+                            <div class="d-flex flex-column gap-2 justify-content-center align-items-center">
+                                 <a href="sicorp-solucion-san-nicolas.html" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100"><i class="fa fa-check-circle me-1"></i> Solución San Nicolás (Gobierno) ✅</a>
+                                 <a href="sicorp-solucion-entre.html" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100"><i class="fa fa-check-circle me-1"></i> Solución ENTRE (Personas y Operaciones) ✅</a>
+                                 <a href="sicorp-solucion-sijam.html" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100"><i class="fa fa-check-circle me-1"></i> Solución SIJAM (Operaciones) ✅</a>
+                                 <a href="sicorp-solucion-grupo-alpina.html" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100"><i class="fa fa-check-circle me-1"></i> Grupo Alpina (Logística y Distribución) ✅</a>
+                                 <a href="suite.html#siprov" class="btn btn-sm btn-primary rounded-pill px-4 py-2 w-100"><i class="fa fa-check-circle me-1"></i> Punto Avícola (Compras, Stock y Rentabilidad) ✅</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vision IA End -->
+
+    <!-- Casos de Éxito y Decisiones Asistidas Start -->
+    <div class="container-xxl py-5" style="background: linear-gradient(180deg, rgba(10, 31, 45, 0.2) 0%, rgba(5, 13, 20, 0.4) 100%) !important; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Impacto Operativo Real</h6>
+                <h1 class="mb-4 text-white" style="font-weight: 700 !important; font-size: 2.2rem;">Decisiones Inteligentes en Acción</h1>
+                <p class="text-muted">SiCopilot no es un simple chatbot. Es la capa de inteligencia de la Suite SICORP que analiza la información de toda la organización para asistir de forma proactiva en decisiones estratégicas y de negocio.</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Tarjeta 1: Caso Grupo Alpina -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="p-4 p-md-5 bg-dark border border-secondary rounded h-100 text-start" style="box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); background: linear-gradient(180deg, rgba(19, 39, 56, 0.6) 0%, rgba(10, 31, 45, 0.8) 100%) !important;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3" style="padding: 4px; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                                <i class="fa fa-boxes-stacked"></i>
+                            </div>
+                            <h4 class="h5 m-0 text-white font-secondary" style="font-weight: 700 !important;">Grupo Alpina</h4>
+                        </div>
+                        <p class="small text-primary mb-3 font-bold" style="letter-spacing: 0.5px;">Logística, Ventas y Distribución Conectada</p>
+                        <p class="small text-muted mb-4">Ejemplos concretos de decisiones que asiste SiCopilot en la operación comercial y logística:</p>
+                        <ul class="list-unstyled text-light small mb-0 space-y-2" style="line-height: 1.6;">
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Detectar productos con baja salida:</strong> Identificación proactiva de mermas o inventario parado en depósitos.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Recomendar promociones:</strong> Sugiere acciones comerciales personalizadas en vivo basadas en stock real.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Sugerir reposición de stock:</strong> Evita quiebres operativos y de abastecimiento en la preparación de pedidos.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Detectar zonas con menor rendimiento:</strong> Analytics territorial de efectividad y desvíos comerciales en calle.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Analizar desempeño de vendedores:</strong> Asistencia ejecutiva y control de metas de visitas de la fuerza de venta.</li>
+                            <li><i class="fa fa-circle-check text-primary me-2"></i><strong>Identificar oportunidades de venta cruzada:</strong> Sugiere productos complementarios al cargar preventas móviles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Caso Punto Avícola -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="p-4 p-md-5 bg-dark border border-secondary rounded h-100 text-start" style="box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); background: linear-gradient(180deg, rgba(19, 39, 56, 0.6) 0%, rgba(10, 31, 45, 0.8) 100%) !important;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="btn-sm-square bg-dark text-primary rounded border border-secondary me-3" style="padding: 4px; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px;">
+                                <i class="fa fa-store"></i>
+                            </div>
+                            <h4 class="h5 m-0 text-white font-secondary" style="font-weight: 700 !important;">Punto Avícola</h4>
+                        </div>
+                        <p class="small text-primary mb-3 font-bold" style="letter-spacing: 0.5px;">Compras, Stock y Rentabilidad Integrada</p>
+                        <p class="small text-muted mb-4">Ejemplos concretos de optimización de abastecimiento y control de márgenes:</p>
+                        <ul class="list-unstyled text-light small mb-0 space-y-2" style="line-height: 1.6;">
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Detectar stock inmovilizado:</strong> Alerta inmediata de productos sin rotación en cámaras frigoríficas y depósitos.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Recomendar compras por rotación:</strong> Sugiere y optimiza órdenes de compra según demanda y estacionalidad real.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Identificar productos a agotarse:</strong> Alertas predictivas de abastecimiento crítico antes del quiebre.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Analizar márgenes y rentabilidad:</strong> Cruce inteligente de costos de abastecimiento vs. precios de venta por lote.</li>
+                            <li class="mb-2"><i class="fa fa-circle-check text-primary me-2"></i><strong>Detectar oportunidades comerciales:</strong> Ventajas en compras mayoristas y evaluación de proveedores clave.</li>
+                            <li><i class="fa fa-circle-check text-primary me-2"></i><strong>Generar alertas de abastecimiento:</strong> Automatización en las solicitudes de reposición e inventarios críticos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Casos de Éxito y Decisiones Asistidas End -->
+
+    <!-- Integración con Ecosistema SICORP Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Centro de Inteligencia Conectado</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Conectado a toda la Suite SICORP</h1>
+                <p class="fs-5 text-muted">SiCopilot se integra con cada capacidad del ecosistema para convertir datos operativos en información accionable y decisiones más inteligentes.</p>
+            </div>
+            
+            <div class="ecosystem-container wow fadeIn" data-wow-delay="0.3s">
+                <!-- Lienzo de Conexiones SVG -->
+                <svg class="ecosystem-svg-lines" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow-light-copilot" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="1.5" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    
+                    <!-- Líneas de Conexión hacia el Hub Central (450, 310) -->
+                    <!-- Superior: SiCheck (150, 175), SiERP (450, 175), SiFleet (750, 175) -> Nucleus (450, 310) -->
+                    <path d="M150,175 Q250,220 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,175 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,175 Q650,220 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Segunda Línea: SiProv (150, 445), SiSync (450, 445), SiStore (750, 445) -> Nucleus (450, 310) -->
+                    <path d="M150,445 Q250,380 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,445 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,445 Q650,380 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Tercera Línea: SiTicket (150, 565), SiHabs (450, 565), SiEscri (750, 565) -> Nucleus (450, 310) -->
+                    <path d="M150,565 C200,530 250,420 450,310" class="ecosystem-flow-line"></path>
+                    <path d="M450,565 L450,310" class="ecosystem-flow-line"></path>
+                    <path d="M750,565 C700,530 650,420 450,310" class="ecosystem-flow-line"></path>
+                    
+                    <!-- Nodos de Luz Animados -->
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="11s" repeatCount="indefinite" path="M150,175 Q250,220 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="9.5s" repeatCount="indefinite" path="M450,175 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="12s" repeatCount="indefinite" path="M750,175 Q650,220 450,310" />
+                    </circle>
+                    
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="10.5s" repeatCount="indefinite" path="M150,445 Q250,380 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="9s" repeatCount="indefinite" path="M450,445 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="11.5s" repeatCount="indefinite" path="M750,445 Q650,380 450,310" />
+                    </circle>
+                    
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="13s" repeatCount="indefinite" path="M150,565 C200,530 250,420 450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="10s" repeatCount="indefinite" path="M450,565 L450,310" />
+                    </circle>
+                    <circle r="2.2" fill="#25D366" filter="url(#glow-light-copilot)">
+                        <animateMotion dur="14s" repeatCount="indefinite" path="M750,565 C700,530 650,420 450,310" />
+                    </circle>
+                </svg>
+                
+                <div class="ecosystem-grid">
+                    <!-- Fila 1: Spanning Connectivity Card -->
+                    <div class="ecosystem-node copilot" style="border: 1px solid var(--secondary) !important; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(10, 31, 45, 0.95) 100%) !important;">
+                        <div class="copilot-badge"><i class="fa fa-network-wired me-1.5"></i> Conectividad Inteligente</div>
+                        <h5 class="text-primary">SiSync</h5>
+                        <p class="copilot-subtitle">Orquestación e Integración de Datos</p>
+                        <span class="copilot-description">Sincroniza y orquesta flujos de información procedentes de múltiples sistemas locales o externos, erradicando planillas e importaciones manuales para alimentar al Centro de Inteligencia.</span>
+                    </div>
+                    
+                    <!-- Fila 2: Plataformas Periféricas Superiores -->
+                    <a href="suite.html#sicheck" class="ecosystem-node">
+                        <h5>SiCheck</h5>
+                        <span>Gestión de Personas</span>
+                    </a>
+                    <a href="suite.html#sierp" class="ecosystem-node">
+                        <h5>SiERP</h5>
+                        <span>Operaciones Inteligentes</span>
+                    </a>
+                    <a href="suite.html#sifleet" class="ecosystem-node">
+                        <h5>SiFleet</h5>
+                        <span>Logística Inteligente</span>
+                    </a>
+                    
+                    <!-- Fila 3: Núcleo (SiCopilot en lugar de SICORP) -->
+                    <div class="ecosystem-placeholder d-none d-md-block"></div>
+                    <div class="ecosystem-hub-nucleus" style="border: 2px solid var(--primary) !important; background: rgba(19, 39, 56, 0.95); box-shadow: 0 0 25px rgba(37, 211, 102, 0.2); padding: 20px !important;">
+                        <i class="fa fa-circle-nodes text-primary display-6 mb-2" style="filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.6));"></i>
+                        <h5 class="text-white font-secondary m-0" style="font-weight: 700 !important; font-size: 1.15rem;">SiCopilot</h5>
+                        <span class="text-primary font-secondary" style="font-size: 0.72rem; font-weight: 600; letter-spacing: 1px;">Centro de Inteligencia</span>
+                    </div>
+                    <div class="ecosystem-placeholder d-none d-md-block"></div>
+                    
+                    <!-- Fila 4: Plataformas Periféricas Medias -->
+                    <a href="suite.html#siprov" class="ecosystem-node">
+                        <h5>SiProv</h5>
+                        <span>Compras Inteligentes</span>
+                    </a>
+                    <div class="ecosystem-placeholder d-none d-md-block"></div>
+                    <a href="suite.html#sistore" class="ecosystem-node">
+                        <h5>SiStore</h5>
+                        <span>Comercio Inteligente</span>
+                    </a>
+                    
+                    <!-- Fila 5: Plataformas Periféricas Inferiores -->
+                    <a href="suite.html#siticket" class="ecosystem-node">
+                        <h5>SiTicket</h5>
+                        <span>Gestión y Soporte</span>
+                    </a>
+                    <a href="suite.html#sihabs" class="ecosystem-node">
+                        <h5>SiHabs</h5>
+                        <span>Gobierno Digital</span>
+                    </a>
+                    <a href="suite.html#siescri" class="ecosystem-node">
+                        <h5>SiEscri</h5>
+                        <span>Procesos Legales Digitales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Integración con Ecosistema SICORP End -->
+
+    <!-- Componentes IA Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary font-secondary text-uppercase mb-2" style="letter-spacing: 2px;">Capacidades de SiCopilot</h6>
+                <h1 class="mb-4" style="font-weight: 700 !important; font-size: 2.2rem;">Capacidades del Centro de Inteligencia</h1>
+                <p>SiCopilot conecta, interpreta y recomienda de forma automatizada para potenciar las decisiones y resultados de la organización.</p>
+            </div>
+            <div class="row g-4">
+                <!-- 1. Alertas Inteligentes -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="btn-lg-square bg-primary text-dark rounded-circle mb-4 font-bold"><i class="fa fa-bell"></i></div>
+                        <h4 class="mb-3">Alertas Inteligentes</h4>
+                        <p class="mb-0 small text-muted">Detección automática de anomalías, desvíos y oportunidades operativas.</p>
+                    </div>
+                </div>
+                <!-- 2. Análisis Predictivo -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="btn-lg-square bg-primary text-dark rounded-circle mb-4 font-bold"><i class="fa fa-chart-line"></i></div>
+                        <h4 class="mb-3">Análisis Predictivo</h4>
+                        <p class="mb-0 small text-muted">Anticipación de quiebres de stock, riesgos y comportamientos futuros.</p>
+                    </div>
+                </div>
+                <!-- 3. Recomendaciones Automáticas -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="btn-lg-square bg-primary text-dark rounded-circle mb-4 font-bold"><i class="fa fa-lightbulb"></i></div>
+                        <h4 class="mb-3">Recomendaciones Automáticas</h4>
+                        <p class="mb-0 small text-muted">Sugerencias de compras, promociones, reposiciones y acciones de mejora.</p>
+                    </div>
+                </div>
+                <!-- 4. Asistencia a Decisiones -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="p-4 bg-dark border border-secondary rounded h-100">
+                        <div class="btn-lg-square bg-primary text-dark rounded-circle mb-4 font-bold"><i class="fa fa-circle-check"></i></div>
+                        <h4 class="mb-3">Asistencia a Decisiones</h4>
+                        <p class="mb-0 small text-muted">Información contextual para directivos, supervisores y responsables de operación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Componentes IA End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" style="height: 40px; margin-right: 15px;">
+                        <h5 class="text-white m-0 font-secondary" style="font-weight: 700 !important;">SICORP</h5>
+                    </div>
+                    <p class="mb-4">Transformamos procesos, datos y decisiones mediante software e inteligencia artificial. Habilitando la evolución corporativa sostenible.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://wa.me/5493364027967" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.linkedin.com/in/leandro-moisello-2391b34a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/sicorp.srl/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4 font-secondary">Navegación</h5>
+                    <a class="btn btn-link" href="index.html">Inicio</a>
+                    <a class="btn btn-link" href="capacidades.html">Capacidades</a>
+                    <a class="btn btn-link" href="industrias.html">Industrias</a>
+                    <a class="btn btn-link" href="suite.html">Suite SICORP</a>
+                    <a class="btn btn-link" href="casos.html">Casos de Éxito</a>
+                    <a class="btn btn-link" href="ia.html">SiCopilot</a>
+                    <a class="btn btn-link" href="nosotros.html">Nosotros</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4 font-secondary">Contacto Directo</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>San Nicolás de los Arroyos, Argentina</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+54 9 3364027967</p>
+                    <p class="mb-2"><i class="far fa-clock text-primary me-3"></i>Lunes a Viernes: 9:00 a 15:00 hs</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4 font-secondary">Ecosistema</h5>
+                    <a class="btn btn-link" href="suite.html#sierp">SiERP (Operaciones)</a>
+                    <a class="btn btn-link" href="suite.html#sicheck">SiCheck (Personas)</a>
+                    <a class="btn btn-link" href="suite.html#sisync">SiSync (Conectividad)</a>
+                    <a class="btn btn-link" href="suite.html#sifleet">SiFleet (Logística)</a>
+                    <a class="btn btn-link" href="suite.html#siprov">SiProv (Compras)</a>
+                    <a class="btn btn-link" href="suite.html#sistore">SiStore (Comercio)</a>
+                    <a class="btn btn-link" href="suite.html#sihabs">SiHabs (Gobierno)</a>
+                    <a class="btn btn-link" href="suite.html#siescri">SiEscri (Legales)</a>
+                    <a class="btn btn-link" href="suite.html#siticket">SiTicket (Soporte)</a>
+                    <a class="btn btn-link" href="ia.html">SiCopilot (Centro de Inteligencia)</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">SICORP</a>, Todos los derechos reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Diseñado y Construido por <a class="border-bottom" href="index.html">SICORP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

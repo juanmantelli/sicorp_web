@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="img/favicon.ico" rel="icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solución Implementada: SIJAM - SICORP</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sicorp-dark': '#0A1F2D',
+                        'sicorp-secondary': '#132738',
+                        'sicorp-green': '#25D366',
+                        'sicorp-border': 'rgba(255, 255, 255, 0.08)',
+                        'sicorp-grey': '#CBD5E1',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'secondary': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A1F2D;
+            color: #F8FAFC;
+        }
+        .glass-card {
+            background: rgba(19, 39, 56, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+        .glass-card:hover {
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+        .glowing-badge {
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+
+    <!-- Header Section -->
+    <nav class="border-b border-sicorp-border py-4 bg-sicorp-dark sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/logo_sicorp_transparente.png" alt="SICORP Logo" class="h-10">
+                <div class="flex flex-col text-left">
+                    <span class="text-white font-secondary font-bold text-lg tracking-wider">SICORP</span>
+                    <span class="text-sicorp-green font-secondary font-semibold text-[8px] tracking-[2px]">ORGANIZACIONES INTELIGENTES</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="casos.html" class="text-sm font-medium text-sicorp-grey hover:text-white transition"><i class="fa fa-arrow-left mr-2"></i>Volver a Casos</a>
+                <a href="diagnostico.html" class="bg-sicorp-green text-sicorp-dark text-xs font-bold px-4 py-2 rounded-full hover:bg-opacity-90 transition font-secondary">Solicitar Diagnóstico</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-20 relative overflow-hidden bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-sicorp-secondary via-sicorp-dark to-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sicorp-green/30 bg-sicorp-green/10 text-sicorp-green text-xs font-bold tracking-wider mb-6 glowing-badge">
+                <i class="fa fa-network-wired"></i> CASO REAL · INTEGRACIÓN OPERATIVA INTELIGENTE
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-secondary font-extrabold mb-4 tracking-tight leading-tight text-white">
+                SIJAM
+            </h1>
+            <p class="text-lg md:text-xl text-sicorp-green font-secondary font-medium mb-8">
+                Solución Implementada: Procesamiento Automático y Consolidación de Información Multi-Planta
+            </p>
+            <p class="text-sicorp-grey max-w-3xl mx-auto text-base md:text-lg mb-12 leading-relaxed">
+                Consolidación automática y segura de información operativa proveniente de múltiples plantas industriales, contratos y sistemas de acceso. Un ecosistema que unifica formatos dispersos, aplica reglas complejas de convenios por puesto y automatiza las liquidaciones por centro de costo.
+            </p>
+
+            <!-- Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">En Horas</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Procesamiento Completo</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Lo que antes requería días o semanas manuales hoy toma horas.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">100%</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Trazabilidad Operativa</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Control riguroso sobre reglas de convenios y contratos.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <span class="block text-4xl font-extrabold text-white font-secondary mb-1">Automatizada</span>
+                    <span class="text-xs font-semibold text-sicorp-green tracking-wider uppercase">Consolidación de Datos</span>
+                    <p class="text-xs text-sicorp-grey mt-2">Información limpia, conciliada y lista para liquidar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implemented Solutions Section -->
+    <section class="py-16 bg-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-secondary font-bold text-center mb-2">Arquitectura de Módulos Implementados</h2>
+            <p class="text-center text-sicorp-grey mb-12 max-w-2xl mx-auto">Conoce cómo interactúan los diferentes módulos de control, procesamiento e inteligencia operativa en SIJAM.</p>
+
+            <div class="space-y-16">
+                <!-- Module 1: SiSync (EL PROTAGONISTA) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-sync-alt"></i> NÚCLEO DE INTEGRACIÓN
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiSync</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Orquestación de Múltiples Fuentes y Reglas Operativas</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Resuelve la integración automática de datos procedentes de las diferentes plantas. Procesa de manera autónoma los diferentes archivos y formatos cargados en origen, aplicando reglas jerárquicas complejas estructuradas por contrato, convenio, puesto y tipo de operación.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Integración de múltiples fuentes</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Procesamiento automático de archivos</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Reglas específicas por contrato</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Validación de convenios</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Cálculos por puesto y sector</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Consolidación en tiempo real</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Información lista para liquidación</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: SiSync Ingestor Multi-Planta -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left w-full">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                    <span class="text-xs text-sicorp-grey font-medium font-secondary ml-2">Monitor de Ingesta SiSync</span>
+                                </div>
+                                <span class="text-[10px] bg-sicorp-green/20 border border-sicorp-green text-sicorp-green font-bold px-2 py-0.5 rounded">SINCRO ACTIVA</span>
+                            </div>
+
+                            <div class="space-y-3 text-xs">
+                                <div class="bg-sicorp-dark/80 p-2.5 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-xs font-bold text-white"><i class="fa fa-file-csv text-sicorp-green mr-1.5"></i> Fichadas_Planta_Ramallo.csv</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Registros: 420 · Reglas aplicadas: Convenio UOM + Contrato #S-49</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">PROCESADO ✅</span>
+                                </div>
+                                <div class="bg-sicorp-dark/80 p-2.5 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-xs font-bold text-white"><i class="fa fa-file-excel text-sicorp-green mr-1.5"></i> Horas_Planta_San_Nicolas.xlsx</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Registros: 512 · Reglas aplicadas: Convenio Químicos + Operación Activa</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">PROCESADO ✅</span>
+                                </div>
+                                <div class="bg-sicorp-dark/80 p-2.5 rounded border border-sicorp-border flex justify-between items-center">
+                                    <div>
+                                        <h5 class="text-xs font-bold text-white"><i class="fa fa-file-import text-sicorp-green mr-1.5"></i> Legajos_Planta_Constitucion.json</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Registros: 318 · Reglas aplicadas: Control de Puestos y Asistencias</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">PROCESADO ✅</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2: SiCheck -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-7 order-last lg:order-first">
+                        <!-- Mockup: SiCheck Access Register -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left max-w-sm mx-auto">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-fingerprint text-sicorp-green mr-1"></i> Control Biométrico SiCheck</span>
+                                <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded font-bold">PLANTA ACTIVA</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs">
+                                <div class="p-2.5 bg-sicorp-dark/60 rounded border border-sicorp-border flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-white">Ingreso: Roberto Alessandri</span>
+                                        <p class="text-[8px] text-sicorp-grey">ID: #OP-884 · Puesto: Técnico Mecánico · Planta Ramallo</p>
+                                    </div>
+                                    <span class="text-[9px] font-bold text-sicorp-green">06:58 AM</span>
+                                </div>
+                                <div class="p-2.5 bg-sicorp-dark/60 rounded border border-sicorp-border flex items-center justify-between">
+                                    <div>
+                                        <span class="font-bold text-white">Ingreso: María Victoria Solís</span>
+                                        <p class="text-[8px] text-sicorp-grey">ID: #OP-920 · Puesto: Inspectora de Control · Planta San Nicolás</p>
+                                    </div>
+                                    <span class="text-[9px] font-bold text-sicorp-green">07:01 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-user-check"></i> CAPTURA EN ORIGEN
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiCheck</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Captura y Control de Personal en Operaciones Distribuidas</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Resuelve la toma de información en origen mediante controles biométricos de acceso y sistemas de verificación de presencia activa en cada planta física, asegurando que todos los registros de ingreso y egreso se consoliden de forma limpia y transparente.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control biométrico físico</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Presencia y asistencia en vivo</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Captura de datos en origen</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Gestión de operaciones distribuidas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control de turnos rotativos</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Registro de incidencias locales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 3: SiCopilot -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-circle-nodes"></i> CENTRO DE INTELIGENCIA
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiCopilot</h3>
+                        <p class="text-sm text-sicorp-green font-medium">Validación de Datos, Auditoría y Detección de Anomalías</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Centro de Inteligencia que audita activamente los datos consolidados por SiSync. Compara los registros físicos contra los convenios y contratos firmados para detectar de forma proactiva duplicidades, categorizaciones incorrectas o inconsistencias horarias.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Detección proactiva de anomalías</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Alertas inteligentes inmediatas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Validaciones cruzadas de convenio</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Recomendaciones para directores</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control de desvíos operativos</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Auditoría integral automatizada</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mockup: SiCopilot Inconsistency Detector -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-primary overflow-hidden text-left" style="border-color: var(--primary) !important;">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-white font-bold font-secondary"><i class="fa fa-network-wired text-sicorp-green mr-1.5"></i> SiCopilot Auditor Operativo</span>
+                                <span class="text-[8px] bg-sicorp-green/20 text-sicorp-green px-2 py-0.5 rounded font-bold">ALERTA DE CONTRATO</span>
+                            </div>
+
+                            <div class="bg-sicorp-dark/80 p-3 rounded border border-sicorp-green/30 text-xs space-y-2">
+                                <div class="flex items-center gap-2 text-sicorp-green font-bold mb-1">
+                                    <i class="fa fa-circle-exclamation text-yellow-500 text-sm"></i>
+                                    <span>Inconsistencia en Carga de Puesto</span>
+                                </div>
+                                <p class="text-[11px] text-sicorp-grey">
+                                    "Se detectó que el colaborador **Roberto Alessandri** registró horas en Planta Ramallo bajo un puesto con 'Categoría UOM - Oficial' pero su contrato activo en el sistema especifica 'Categoría UOM - Oficial Especializado'."
+                                </p>
+                                <div class="flex gap-2 pt-2 border-t border-sicorp-border/60">
+                                    <button class="bg-sicorp-green text-sicorp-dark text-[9px] font-bold px-2 py-1 rounded">Corregir Categoría</button>
+                                    <button class="border border-sicorp-border text-sicorp-grey text-[9px] font-medium px-2 py-1 rounded">Ignorar Alerta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4: SiERP (COMPLEMENTARIO) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-sicorp-border pt-12">
+                    <div class="lg:col-span-7 order-last lg:order-first">
+                        <!-- Mockup: SiERP Complementary Monitor -->
+                        <div class="glass-card rounded-xl p-4 shadow-2xl border border-sicorp-border overflow-hidden text-left">
+                            <div class="flex items-center justify-between border-b border-sicorp-border pb-3 mb-4">
+                                <span class="text-xs text-sicorp-grey font-medium font-secondary"><i class="fa fa-warehouse text-sicorp-green mr-1.5"></i> Soporte Operativo SiERP</span>
+                                <span class="text-[8px] bg-sicorp-green/20 text-sicorp-green px-2 py-0.5 rounded">ESTADO PAÑOL</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs">
+                                <div class="flex justify-between items-center p-2 bg-sicorp-dark/80 rounded border border-sicorp-border">
+                                    <div>
+                                        <h5 class="text-xs font-bold text-white">Solicitud de Pañol #SC-492</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Destino: Mantenimiento Planta Ramallo · Kit de Herramientas</p>
+                                    </div>
+                                    <span class="text-[8px] bg-green-500/20 text-green-500 px-2 py-0.5 rounded">Entregado ✅</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-sicorp-dark/80 rounded border border-sicorp-border">
+                                    <div>
+                                        <h5 class="text-xs font-bold text-white">Control de Contrato de Abastecimiento</h5>
+                                        <p class="text-[9px] text-sicorp-grey">Proveedor: Aceros Pampeanos · Consumos acumulados: 84%</p>
+                                    </div>
+                                    <span class="text-[8px] bg-yellow-500/20 text-yellow-500 px-2 py-0.5 rounded">En Límite ⚠️</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold text-sicorp-green px-3 py-1 rounded bg-sicorp-green/10 border border-sicorp-green/20">
+                            <i class="fa fa-cogs"></i> SOPORTE DE PROCESOS
+                        </div>
+                        <h3 class="text-2xl font-secondary font-bold text-white">SiERP <span class="text-sm text-sicorp-green font-medium block lg:inline ml-0 lg:ml-2">(Soporte Complementario)</span></h3>
+                        <p class="text-sm text-sicorp-green font-medium">Pañol, Solicitudes Internas y Control de Consumos</p>
+                        <p class="text-sm text-sicorp-grey leading-relaxed">
+                            Actúa como el soporte administrativo interno de la operación, resolviendo la trazabilidad y logística física en pañol de obra, solicitudes internas de materiales para mantenimiento y control de contratos de abastecimiento de materias primas.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-sicorp-grey">
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Solicitudes internas aprobadas</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Control de pañol de obra</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Trazabilidad de consumos físicos</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Abastecimiento integrado</li>
+                            <li><i class="fa fa-check text-sicorp-green mr-2"></i>Gestión de contratos activos</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence & Benefits Section -->
+    <section class="py-16 bg-sicorp-secondary/40 border-t border-b border-sicorp-border">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl font-secondary font-bold text-center mb-8">Evidencia de Valor y Beneficios Obtenidos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <h4 class="text-lg font-secondary font-bold text-white flex items-center gap-2"><i class="fa fa-circle-check text-sicorp-green"></i> Para el Control de Contratos y Convenios</h4>
+                    <p class="text-sm text-sicorp-grey leading-relaxed">
+                        Control riguroso e inteligente sobre la imputación por centro de costos de personal que rota entre múltiples plantas industriales y proyectos. Mayor trazabilidad operativa, mitigación total de riesgos de errores de carga y un control preciso de la productividad de las operaciones distribuidas.
+                    </p>
+                </div>
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <h4 class="text-lg font-secondary font-bold text-white flex items-center gap-2"><i class="fa fa-circle-check text-sicorp-green"></i> Para Administración y Liquidación</h4>
+                    <p class="text-sm text-sicorp-grey leading-relaxed">
+                        Erradicación total de la importación y consolidación manual de planillas dispersas. Procesos complejos de conciliación de fichadas, convenios y puestos que anteriormente consumían días o semanas de arduo trabajo manual ahora se resuelven de manera impecable en cuestión de horas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="py-16 text-center bg-sicorp-dark">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-2xl font-secondary font-bold text-white mb-4">¿Quieres construir una organización inteligente?</h3>
+            <p class="text-sicorp-grey mb-8">Descubre cómo SICORP puede digitalizar, integrar y transformar las operaciones de tu industria o gobierno.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="diagnostico.html" class="bg-sicorp-green text-sicorp-dark font-secondary font-bold px-8 py-3 rounded-full hover:bg-opacity-90 transition font-secondary">Solicitar Diagnóstico Especializado</a>
+                <a href="casos.html" class="border border-sicorp-border text-white font-secondary font-medium px-8 py-3 rounded-full hover:bg-sicorp-secondary transition font-secondary">Ver otros Casos de Éxito</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

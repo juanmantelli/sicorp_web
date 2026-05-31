@@ -1,0 +1,241 @@
+
+--- PAGE 1 ---
+PORTAFOLIO ESTRATÉGICO SICORP
+ORGANIZACIONES INTELIGENTES
+Transformamos procesos, datos y decisiones mediante software e inteligencia artificial.
+VISIÓN DEL PORTAFOLIO
+Las organizaciones no compran sistemas.
+Compran soluciones a problemas.
+Por eso SICORP organiza sus capacidades alrededor de las necesidades reales de las organizaciones y
+no de sus productos.
+1. PERSONAS INTELIGENTES
+Problema
+Falta de control sobre asistencia, ausentismo, novedades, productividad y gestión de personas.
+Objetivo
+Transformar la información laboral en decisiones más rápidas y precisas.
+Capacidades
+Control horario
+Asistencia
+Novedades
+Ausentismo
+Horas extras
+Legajos
+Turnos
+Indicadores
+Plataformas
+SiCheck
+SiSync
+SiCopilot
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+1
+--- PAGE 2 ---
+Casos de referencia
+ENTRE
+SIJAM
+2. OPERACIONES INTELIGENTES
+Problema
+Información dispersa, procesos manuales y falta de visibilidad operativa.
+Objetivo
+Centralizar la operación en una única fuente de verdad.
+Capacidades
+Compras
+Ventas
+Inventarios
+Tesorería
+Producción
+Costos
+Indicadores
+Reportes
+Plataformas
+SiERP
+SiCopilot
+Casos de referencia
+Grupo Alpina
+CARSIL
+Punto Avícola
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+2
+--- PAGE 3 ---
+3. COMPRAS INTELIGENTES
+Problema
+Procesos de compras poco controlados y baja trazabilidad de proveedores.
+Objetivo
+Digitalizar y controlar el ciclo completo de abastecimiento.
+Capacidades
+Portal de proveedores
+Cotizaciones
+Licitaciones
+Órdenes de compra
+Facturación
+Seguimiento
+Auditoría
+Plataformas
+SiProv
+SiERP
+SiCopilot
+Casos de referencia
+Municipalidad de San Nicolás
+4. LOGÍSTICA INTELIGENTE
+Problema
+Falta de control sobre flotas, mantenimiento y distribución.
+Objetivo
+Maximizar disponibilidad operativa y reducir costos.
+Capacidades
+Gestión de flotas
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+3
+--- PAGE 4 ---
+Mantenimiento
+Taller
+Combustible
+Disponibilidad
+Distribución
+Activos móviles
+Plataformas
+SiFleet
+SiERP
+SiCopilot
+Casos de referencia
+Grupo Quiroga
+5. COMERCIO INTELIGENTE
+Problema
+Dificultad para controlar ventas, stock y rentabilidad en tiempo real.
+Objetivo
+Gestionar la operación comercial de forma integrada.
+Capacidades
+Punto de venta
+Sucursales
+Inventarios
+Clientes
+Promociones
+Rentabilidad
+Indicadores
+Plataformas
+SiStore
+SiERP
+SiCopilot
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+4
+--- PAGE 5 ---
+6. GOBIERNO DIGITAL
+Problema
+Procesos lentos, documentación dispersa y baja trazabilidad.
+Objetivo
+Digitalizar y transparentar la gestión pública.
+Capacidades
+Habilitaciones
+Inspecciones
+Expedientes
+Proveedores
+Escribanos
+Mesa de ayuda
+Seguimiento
+Plataformas
+SiHabs
+SiProv
+SiTicket
+SiEscri
+SiCopilot
+Caso de referencia
+Municipalidad de San Nicolás
+7. INTELIGENCIA ARTIFICIAL APLICADA
+Problema
+Demasiada información y poco tiempo para analizarla.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+5
+--- PAGE 6 ---
+Objetivo
+Transformar datos en decisiones y acciones concretas.
+Capacidades
+Asistentes inteligentes
+Agentes IA
+Automatización
+Predicción
+Análisis
+Recomendaciones
+Orquestación operativa
+Plataformas
+SiCopilot
+Servicios
+Consultoría IA
+Diagnóstico de oportunidades
+Diseño de agentes
+Automatización de procesos
+Implementación y evolución
+NUESTRA PROPUESTA DE VALOR
+La mayoría de las organizaciones debe adaptarse a los sistemas que implementa.
+En SICORP creemos lo contrario.
+La tecnología debe adaptarse a la organización.
+No la organización a la tecnología.
+MODELO SICORP
+Consultoría
+↓
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+6
+--- PAGE 7 ---
+Diagnóstico
+↓
+Transformación
+↓
+Suite SICORP
+↓
+Inteligencia Artificial
+↓
+Resultados
+ORGANIZACIONES QUE CONFÍAN EN SICORP
+Municipalidad de San Nicolás
+Grupo Alpina
+CARSIL
+Punto Avícola
+ENTRE
+SIJAM
+Grupo Quiroga
+SICORP
+Organizaciones Inteligentes.
+Construyendo el Sistema Operativo de las Organizaciones.
+7
