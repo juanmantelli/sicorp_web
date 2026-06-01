@@ -124,10 +124,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     justify-content: flex-start;
     height: 75px !important;
     padding: 6px 0 !important;
+    margin-left: -12px !important;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-brand.navbar-brand-modern {
+        margin-left: -24px !important;
+    }
 }
 
 .navbar-brand-modern .brand-logo-sin-fondo-header {
-    height: 38px !important;
+    height: 48px !important;
     width: auto !important;
     object-fit: contain;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -145,6 +152,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: -12px !important;
+}
+
+@media (min-width: 992px) {
+    .navbar a.btn {
+        margin-right: -24px !important;
+    }
+    .navbar .navbar-nav {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 .navbar .navbar-nav .nav-link {
@@ -1648,4 +1666,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: inherit !important;
     font-family: inherit !important;
     text-transform: inherit !important;
+}
+
+/* Asegurar legibilidad del prefijo "Si" dentro de cualquier botón */
+.btn .sicorp-si {
+    color: inherit !important;
 }
