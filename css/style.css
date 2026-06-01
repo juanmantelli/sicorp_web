@@ -117,6 +117,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     height: 75px;
 }
 
+/* Nuevo Branding Moderno Vertical con Imagen Unificada en el Navbar */
+.navbar .navbar-brand.navbar-brand-modern {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 75px !important;
+    padding: 6px 0 !important;
+}
+
+.navbar-brand-modern .brand-logo-sin-fondo-header {
+    height: 38px !important;
+    width: auto !important;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto hover premium suave */
+.navbar-brand-modern:hover .brand-logo-sin-fondo-header {
+    transform: scale(1.05);
+}
+
 .navbar a.btn {
     height: 42px;
     display: inline-flex;
@@ -1041,9 +1062,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     background: rgba(19, 39, 56, 0.95) !important;
 }
 
-.ecosystem-node:hover h5 {
+/* Desactivar para que el resto del nombre no se pinte de verde en hover */
+/* .ecosystem-node:hover h5 {
     color: var(--primary) !important;
-}
+} */
 
 /* Copilot: Capa de Inteligencia Superior */
 .ecosystem-node.copilot {
@@ -1119,6 +1141,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 12px !important;
     filter: drop-shadow(0 0 12px rgba(37, 211, 102, 0.45)) !important;
     animation: pulse-logo-glow 3.5s infinite alternate ease-in-out !important;
+}
+
+.ecosystem-hub-nucleus .brand-logo-sin-fondo {
+    max-width: 90% !important;
+    height: auto !important;
+    max-height: 90px !important;
+    width: auto !important;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.4)) !important;
+    animation: pulse-logo-glow 4s infinite alternate ease-in-out !important;
+    margin: 0 auto !important;
 }
 
 .ecosystem-hub-nucleus h5 {
@@ -1602,4 +1635,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         width: 150px;
         height: 150px;
     }
+}
+
+/* ==========================================================================
+   IDENTIDAD DE LA SUITE SICORP
+   ========================================================================== */
+.ecosystem-node h5 .sicorp-si,
+.ecosystem-node h3 .sicorp-si,
+.sicorp-si {
+    color: var(--primary) !important; /* #25D366 Verde SICORP */
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    text-transform: inherit !important;
 }
