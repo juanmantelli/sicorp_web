@@ -113,9 +113,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     transition: .5s;
 }
 
-.navbar .navbar-brand,
-.navbar a.btn {
+.navbar .navbar-brand {
     height: 75px;
+}
+
+.navbar a.btn {
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .navbar .navbar-nav .nav-link {
