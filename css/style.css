@@ -1672,3 +1672,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .btn .sicorp-si {
     color: inherit !important;
 }
+
+/* Corregir tamaño y formato del prefijo "Si" en el núcleo central del ecosistema */
+.ecosystem-hub-nucleus .sicorp-si {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    text-transform: inherit !important;
+    letter-spacing: inherit !important;
+    color: var(--primary) !important;
+}
